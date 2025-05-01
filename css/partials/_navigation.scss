@@ -7,9 +7,11 @@ header {
     display: flex;
     justify-content: space-between;  // Distribui os itens de forma espaçada no header
     align-items: center;
-    padding: 0 50px;
+    padding: 0 35px;
 
-    
+    @include responsive(mobile){
+        padding: 25px;
+    }
     
 
 }
@@ -87,12 +89,12 @@ a {
     @include responsive(mobile){
         display: block;
         order: -1;
-        margin-right: auto; //tbm funciona sem.
+        margin: 0;
         width: 24px;  //igual ao hamburguer, pra nao crescer quando abrir o x. 
         
-        margin-left: 0; /* Garante que fique colado à esquerda */
-        padding-left: 20px; /* Espaçamento do canto da tela */
         
+       
+        border: 1px solid red;
         
         
     }
@@ -178,43 +180,40 @@ a {
   } 
   
   .menu-mobile-item {
-    position: fixed; /* Mude de absolute para fixed */
+    position: fixed; /* Mude de absolute para fixed, pq?? */
     top: 90px; /* Altura do header */
     left: 0; /* Colado no canto esquerdo */
-    width: 80%; /* Ou um valor fixo como 250px */
-    height: 100vh;
+    width: 250px; /* Ou um valor fixo como 250px */
     background-color: $pink-light;
     list-style: none;
-    padding: 20px 0;
+  
+    
     margin: 0;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-    transform: translateX(-100%); /* Esconde inicialmente */
+    display: none;
     transition: transform 0.3s ease;
     z-index: 100;
+
+    
 }
 
-.menu-mobile-item.active {
-    transform: translateX(0); /* Mostra quando ativo */
-}
+
 
 .menu-mobile-item li {
     padding: 15px 25px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    
 }
 
 .sub-list-mobile {
-    padding-left: 15px;
-    border-left: 2px solid $pink-dark;
+    padding-left: 0;
     margin-top: 5px;
-}
-  
-  
-  .sub-list-mobile{
-    border: 1px solid red;
-   
-  }
  
 
+    .sub-list-link{
+        padding: 15px 15px;
+        white-space: nowrap;
+    }
+}
+  
   .menu-mobile-item.active{
     display: block;
   }

@@ -31,7 +31,7 @@ altLang.classList.add('language-selected');
 
 
 
-languageSelector.addEventListener('mouseenter', () => {
+languageSelector.addEventListener('click', () => {
 
     languageList.style.display = 'block';
 });
@@ -49,9 +49,9 @@ altLang.addEventListener('click', () => {
   currentLang.innerHTML = altLang.innerHTML;
   altLang.innerHTML = tempHTML;
 
-  // Atualiza as classes
+  /*// Atualiza as classes
   currentLang.classList.remove('language-option');
-  altLang.classList.add('language-option');
+  altLang.classList.add('language-option');*/
 
   // Reatribui as variáveis, já que os elementos trocaram de lugar
   [currentLang, altLang] = [altLang, currentLang];
