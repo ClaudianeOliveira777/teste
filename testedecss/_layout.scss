@@ -1,0 +1,47 @@
+
+
+.border{
+    border: 1px solid red;
+}
+
+//Container devices
+
+$container-xl: 1440px;
+$container-l: 1140px;
+$container-m: 960px;
+$container-s: 540px;
+
+//Mixing of media query (criando layout responsivo)
+
+@mixin responsive($device){
+    @if $device == xl {
+        //For resolutions UPPER than 1440px.
+        @media screen and (min-width: $container-xl){
+            @content;
+        }
+    }
+    @else if $device == l{
+        //For resolutions BETWEEN 1440px and 1140px (tem como teto 1440 e como piso 1140).
+        @media screen and (max-width: $container-xl) and (min-width: $container-l){
+            @content;
+        }
+    }
+    @else if $device == m{
+        //For resolutions BETWEEN 1140px and 960px. 
+        @media screen and (max-width: $container-l) and (min-width: $container-m){
+            @content;
+        }
+    }
+    @else if $device == s{
+        //For resolutions LESS than 960px.
+        @media screen and (max-width: $container-m){
+            @content;
+        }
+    }
+    @else if $device == xs{
+        //For resolutions LESS than 540px.
+        @media screen and (max-width: $container-s){
+            @content;
+        }
+    }
+}

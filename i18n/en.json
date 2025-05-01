@@ -1,0 +1,25 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "title": "Carrot Cake with Chocolate Frosting",
+        "categories": ["lactose-free", "sugar-free"],
+        "image": "https://postimg.cc/8fhWX1fd",
+        "resume": "Fluffy and delicious carrot cake, lactose-free with vegan chocolate frosting.",
+        "ingredients": [
+          "3 medium carrots",
+          "3 eggs",
+          "1/2 cup of vegetable oil",
+          "1 cup of demerara sugar",
+          "1 1/2 cups of wheat flour",
+          "1 tablespoon of baking powder"
+        ],
+        "instructions": [
+          "Blend the carrots, eggs and oil in a blender.",
+          "Transfer to a bowl and add the remaining ingredients.",
+          "Place in a greased pan and bake for 40 minutes."
+        ]
+      }
+    ]
+  }
+  

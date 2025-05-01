@@ -1,0 +1,304 @@
+
+
+
+header {
+    background-color: $pink-light;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;  // Distribui os itens de forma espaçada no header
+    align-items: center;
+    padding: 0 50px;
+
+    
+    
+
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;  // Garante que o menu fique à esquerda
+    flex-grow: 1;  // Garante que o menu ocupe o máximo de espaço disponível à esquerda
+    
+   
+    
+}
+
+.menu-desktop {
+    display: flex;
+    list-style: none;
+
+    @include responsive(mobile){
+        display: none;
+    }
+    
+}
+
+.menu-item {
+    position: relative;
+    padding: 10px 20px;     
+}
+
+
+ li a:hover{
+ color: white;
+}
+
+
+a {
+    color: $gray-light;
+    cursor: pointer;
+    text-decoration: none;
+    @include typeface-body(m, desktop);
+}
+
+
+/* SubList */
+.menu-item:hover .sub-list {
+    display: block;
+}
+
+.sub-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: $pink-light;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    list-style: none;  
+}
+
+.sub-list li {
+    border-bottom: 1px solid $pink-dark;
+    padding: 12px 15px;
+}
+
+.sub-list li a:hover {
+    color: white;
+}
+
+
+//Menu Mobile
+.menu-mobile{
+    
+    display: none;
+   
+    
+
+    @include responsive(mobile){
+        display: block;
+        order: -1;
+        margin-right: auto; //tbm funciona sem.
+        width: 24px;  //igual ao hamburguer, pra nao crescer quando abrir o x. 
+        
+        margin-left: 0; /* Garante que fique colado à esquerda */
+        padding-left: 20px; /* Espaçamento do canto da tela */
+        
+        
+        
+    }
+}
+
+.mobile-nav{
+    list-style:none;
+}
+
+//Hamburguer
+.hamburguer {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    
+  
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px; //de 100% p/ 24px pra testar. 
+      height: 2px;
+      background-color: #EC7263;
+      border-radius: 5px;
+      transition: 0.5s ease;
+      left: 0;
+
+      
+    }
+  
+    &::before {
+      top: 6px; //mudou de 30% pra 6px.  pq?
+    }
+  
+    &::after {
+      top: 16px;  //70% pra 16px.
+    }
+  }
+  
+  .hamburguer{
+    &:hover{
+      &::before{
+        transform: translateX(3px);
+      }
+  
+      &:hover{
+        &::after{
+          transform: translateX(-3px);
+        }
+      }
+    }
+  }
+  
+  
+  .hamburguer.active {
+    &::before {
+        top: 50%;
+        transform: rotate(45deg);
+       
+      }
+    
+      &::after {
+        top: 50%;
+        transform: rotate(-45deg);
+        
+      }
+  
+      
+    &:hover {
+      &::before {
+        transform: rotate(55deg);
+      }
+  
+      &::after {
+        transform: rotate(-55deg);
+      }
+    }
+  } 
+  
+  .menu-mobile-item {
+    position: fixed; /* Mude de absolute para fixed */
+    top: 90px; /* Altura do header */
+    left: 0; /* Colado no canto esquerdo */
+    width: 80%; /* Ou um valor fixo como 250px */
+    height: 100vh;
+    background-color: $pink-light;
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transform: translateX(-100%); /* Esconde inicialmente */
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+.menu-mobile-item.active {
+    transform: translateX(0); /* Mostra quando ativo */
+}
+
+.menu-mobile-item li {
+    padding: 15px 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sub-list-mobile {
+    padding-left: 15px;
+    border-left: 2px solid $pink-dark;
+    margin-top: 5px;
+}
+  
+  
+  .sub-list-mobile{
+    border: 1px solid red;
+   
+  }
+ 
+
+  .menu-mobile-item.active{
+    display: block;
+  }
+
+//Search 
+
+.search-container {
+    position: relative;  
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+  
+    margin-right: 10px;
+  }
+  
+  .search-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 10px;              /* Aumenta área de toque */
+    display: inline-block;
+   
+    touch-action: manipulation; /* Melhor resposta no mobile. TESTAR */
+  }
+  
+  .search-line {
+    border: none;
+    border-bottom: 1px solid #999;
+    background: transparent;
+    outline: none;
+    padding: 5px 0;
+    width: 0;
+    
+    transition: width 0.3s ease;  
+    font-size: 16px;
+   
+  }
+  
+  .active {
+    width: 150px;
+  }
+
+
+//Idioms
+.language-selector {
+    cursor: pointer;
+    position: relative;
+
+   
+    left: 25px;
+   
+}
+
+.language-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 5;
+    padding: 8px;
+    width: 100%; //Pq 100%, já que o pai nao tem uma altura definada p/ ele se basear. 
+}
+
+
+.language-selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 8px;
+}
+
+
+.flag {
+    width: 20px;
+    vertical-align: middle;
+}
+
+.language-label {
+    font-size: 15px;
+    color: $gray-light;
+    font-family: 'Sora';
+    padding: 8px;
+   
+    &:hover{
+        color: white;
+    }
+}

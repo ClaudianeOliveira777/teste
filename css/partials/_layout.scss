@@ -1,0 +1,50 @@
+
+//Container-devices
+$container-desktop: 1280px; //Notebooks até monitores grandes
+$container-tablet: 768px;   //Tablets e celulares grandes
+$container-mobile: 360px;   //Celulares pequenos
+
+//Mixin of media-queries
+@mixin responsive($device){
+
+    @if $device == desktop {
+        //Para telas maiores que 1280px (notebooks e monitores grandes)
+        @media screen and (min-width: $container-desktop) {
+            @content;
+        }
+    }
+
+    @else if $device == tablet {
+        //Para telas entre 768px e 1279 (tablets e celulares grandes)
+        @media screen and (min-width: $container-tablet) and (max-width: $container-desktop){
+            @content;
+        }
+    }
+
+    @else if $device == mobile{
+        //Para telas menores que 768px (celulares pequenos e médios)
+        @media screen and (max-width: $container-tablet) {
+            @content;
+        }
+    }
+
+    @else if $device == small-mobile {
+        //Para telas muito pequenas
+        @media screen and (max-width: $container-mobile) {
+            @content;
+        }
+    }
+}
+
+.container{
+    max-width: $container-desktop;
+    margin: 0 auto;
+    padding: 80px 24px;  //Talvez mudar para 124/128. 
+    border: 1px solid red;
+
+    @include responsive(mobile){
+        flex-direction: column;
+        padding: 96px 16px;
+        border: 1px solid blue;
+    }
+}

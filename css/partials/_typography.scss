@@ -1,0 +1,23 @@
+
+
+@mixin typeface-body($size, $device){
+    font-family: 'Sora', sans-serif;
+
+    //Medium
+    @if $size == m and $device == desktop{
+        font-size: 16px;
+        line-height: 140%;
+    } @else if $size == m and $device == mobile{
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    //Small
+    @else if $size == s and $device == desktop{
+        font-size: 14px;
+        line-height: 150%;
+    } @else if $size == s and $device == mobile{
+        font-family: 14px;
+        line-height: 150%;
+    }
+}

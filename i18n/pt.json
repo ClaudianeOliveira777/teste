@@ -1,0 +1,25 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "title": "Bolo de Cenoura com Cobertura de Chocolate",
+        "categories": ["sem lactose", "sem açúcar"],
+        "image": "https://postimg.cc/8fhWX1fd",
+        "resume": "Delicioso bolo de cenoura fofinho, sem lactose e com cobertura de chocolate vegano.",
+        "ingredients": [
+          "3 cenouras médias",
+          "3 ovos",
+          "1/2 xícara de óleo vegetal",
+          "1 xícara de açúcar demerara",
+          "1 1/2 xícara de farinha de trigo",
+          "1 colher de sopa de fermento em pó"
+        ],
+        "instructions": [
+          "Bata as cenouras, ovos e óleo no liquidificador.",
+          "Transfira para uma tigela e adicione os demais ingredientes.",
+          "Coloque em forma untada e asse por 40 minutos."
+        ]
+      }
+    ]
+  }
+  

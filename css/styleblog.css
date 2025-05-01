@@ -1,0 +1,266 @@
+@charset "UTF-8";
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151B26;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  border: 1px solid red;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 96px 16px;
+    border: 1px solid blue;
+  }
+}
+
+header {
+  background-color: #fce4ec;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.menu-desktop {
+  display: flex;
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
+}
+
+.menu-item {
+  position: relative;
+  padding: 10px 20px;
+}
+
+li a:hover {
+  color: white;
+}
+
+a {
+  color: #717274;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+/* SubList */
+.menu-item:hover .sub-list {
+  display: block;
+}
+
+.sub-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fce4ec;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  list-style: none;
+}
+
+.sub-list li {
+  border-bottom: 1px solid #f9b4c9;
+  padding: 12px 15px;
+}
+
+.sub-list li a:hover {
+  color: white;
+}
+
+.menu-mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .menu-mobile {
+    display: block;
+    order: -1;
+    margin-right: auto;
+    width: 24px;
+    margin-left: 0; /* Garante que fique colado à esquerda */
+    padding-left: 20px; /* Espaçamento do canto da tela */
+  }
+}
+
+.mobile-nav {
+  list-style: none;
+}
+
+.hamburguer {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+.hamburguer::before, .hamburguer::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #EC7263;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  left: 0;
+}
+.hamburguer::before {
+  top: 6px;
+}
+.hamburguer::after {
+  top: 16px;
+}
+
+.hamburguer:hover::before {
+  transform: translateX(3px);
+}
+.hamburguer:hover:hover::after {
+  transform: translateX(-3px);
+}
+
+.hamburguer.active::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.hamburguer.active::after {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+.hamburguer.active:hover::before {
+  transform: rotate(55deg);
+}
+.hamburguer.active:hover::after {
+  transform: rotate(-55deg);
+}
+
+.menu-mobile-item {
+  position: fixed; /* Mude de absolute para fixed */
+  top: 90px; /* Altura do header */
+  left: 0; /* Colado no canto esquerdo */
+  width: 80%; /* Ou um valor fixo como 250px */
+  height: 100vh;
+  background-color: #fce4ec;
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%); /* Esconde inicialmente */
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+.menu-mobile-item.active {
+  transform: translateX(0); /* Mostra quando ativo */
+}
+
+.menu-mobile-item li {
+  padding: 15px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sub-list-mobile {
+  padding-left: 15px;
+  border-left: 2px solid #f9b4c9;
+  margin-top: 5px;
+}
+
+.sub-list-mobile {
+  border: 1px solid red;
+}
+
+.menu-mobile-item.active {
+  display: block;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  margin-right: 10px;
+}
+
+.search-icon {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 10px; /* Aumenta área de toque */
+  display: inline-block;
+  touch-action: manipulation; /* Melhor resposta no mobile. TESTAR */
+}
+
+.search-line {
+  border: none;
+  border-bottom: 1px solid #999;
+  background: transparent;
+  outline: none;
+  padding: 5px 0;
+  width: 0;
+  transition: width 0.3s ease;
+  font-size: 16px;
+}
+
+.active {
+  width: 150px;
+}
+
+.language-selector {
+  cursor: pointer;
+  position: relative;
+  left: 25px;
+}
+
+.language-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  z-index: 5;
+  padding: 8px;
+  width: 100%;
+}
+
+.language-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.flag {
+  width: 20px;
+  vertical-align: middle;
+}
+
+.language-label {
+  font-size: 15px;
+  color: #717274;
+  font-family: "Sora";
+  padding: 8px;
+}
+.language-label:hover {
+  color: white;
+}/*# sourceMappingURL=styleblog.css.map */
