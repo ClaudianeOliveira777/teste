@@ -237,6 +237,10 @@ a {
   width: 100%;
 }
 
+.language-list.active {
+  display: block;
+}
+
 .language-selected {
   display: flex;
   align-items: center;

@@ -276,6 +276,10 @@ a {
     width: 100%; //Pq 100%, já que o pai nao tem uma altura definada p/ ele se basear. 
 }
 
+.language-list.active{
+    display: block;
+}
+
 
 .language-selected {
     display: flex;

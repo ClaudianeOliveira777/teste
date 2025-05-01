@@ -32,8 +32,7 @@ altLang.classList.add('language-selected');
 
 
 languageSelector.addEventListener('click', () => {
-
-    languageList.style.display = 'block';
+    languageList.classList.toggle('active');
 });
 
 languageSelector.addEventListener('mouseleave', () => {
