@@ -1,0 +1,57 @@
+
+.hero{
+    background-color: $pink-dark;
+    text-align: center;  //está errado usar text-aligin ou é melhor usar display:flex?
+    padding: 48px 16px;
+}
+
+
+
+.woodspoon{
+    width: 35%;
+
+    @include responsive(mobile){
+       width: 50%; 
+    }
+    
+}
+
+.bg-section{
+    background-color: plum;
+    text-align: center;
+   
+    padding: 16px;
+
+    p{
+        padding-top: 20px;
+    }
+}
+
+.food-category{
+    padding-top: 12px;
+    
+    width: 190px;
+   
+
+
+    .category-img{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+
+           
+        
+
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+        }
+        
+    }
+
+    .category-label{
+        padding: 0;
+        
+    }
+
+}

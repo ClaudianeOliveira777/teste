@@ -1,0 +1,175 @@
+$gap-8:   8px;   // → Mais usado em espaçamentos internos (padding, margins pequenos)
+$gap-16:  16px;  // → Default para margins/paddings padrão
+$gap-24:  24px;  // → Espaçamentos confortáveis (ex: entre seções)
+$gap-32:  32px;  // → Muito comum em layouts desktop
+$gap-40:  40px;  // → Alternativa intermediária
+$gap-48:  48px;  // → Espaçamentos grandes (ex: abaixo de títulos)
+$gap-64:  64px;  // → Hero sections, espaçamentos extremos
+$gap-96:  96px;  // → Casos especiais (ex: banners largos)
+$gap-128: 128px; // → Raro, mas útil em layouts full-width
+
+
+// Margins
+.m-8    { 
+    margin: $gap-8; 
+}
+.m-16   { 
+    margin: $gap-16; 
+}
+    
+.m-24   { 
+    margin: $gap-24; 
+}
+.m-32   { 
+    margin: $gap-32; 
+}
+.m-40   { 
+    margin: $gap-40; 
+}
+.m-48   { 
+    margin: $gap-48; 
+}
+.m-64   { 
+    margin: $gap-64;
+ }
+.m-96   { 
+    margin: $gap-96; 
+}
+.m-128  {
+     margin: $gap-128; 
+    }
+
+// Margins - Top/Right/Bottom/Left
+.mt-8   { margin-top: $gap-8; }
+.mt-16  { margin-top: $gap-16; }
+.mt-24  { margin-top: $gap-24; }
+.mt-32  { margin-top: $gap-32; }
+.mt-40  { margin-top: $gap-40; }
+.mt-48  { margin-top: $gap-48; }
+.mt-64  { margin-top: $gap-64; }
+.mt-96  { margin-top: $gap-96; }
+.mt-128 { margin-top: $gap-128; }
+
+.mr-8   { margin-right: $gap-8; }
+.mr-16  { margin-right: $gap-16; }
+.mr-24  { margin-right: $gap-24; }
+.mr-32  { margin-right: $gap-32; }
+.mr-40  { margin-right: $gap-40; }
+.mr-48  { margin-right: $gap-48; }
+.mr-64  { margin-right: $gap-64; }
+.mr-96  { margin-right: $gap-96; }
+.mr-128 { margin-right: $gap-128; }
+
+.mb-8   { margin-bottom: $gap-8; }
+.mb-16  { margin-bottom: $gap-16; }
+.mb-24  { margin-bottom: $gap-24; }
+.mb-32  { margin-bottom: $gap-32; }
+.mb-40  { margin-bottom: $gap-40; }
+.mb-48  { margin-bottom: $gap-48; }
+.mb-64  { margin-bottom: $gap-64; }
+.mb-96  { margin-bottom: $gap-96; }
+.mb-128 { margin-bottom: $gap-128; }
+
+.ml-8   { margin-left: $gap-8; }
+.ml-16  { margin-left: $gap-16; }
+.ml-24  { margin-left: $gap-24; }
+.ml-32  { margin-left: $gap-32; }
+.ml-40  { margin-left: $gap-40; }
+.ml-48  { margin-left: $gap-48; }
+.ml-64  { margin-left: $gap-64; }
+.ml-96  { margin-left: $gap-96; }
+.ml-128 { margin-left: $gap-128; }
+
+// Margins - Eixo X/Y
+.mx-8   { margin-left: $gap-8; margin-right: $gap-8; }
+.mx-16  { margin-left: $gap-16; margin-right: $gap-16; }
+.mx-24  { margin-left: $gap-24; margin-right: $gap-24; }
+.mx-32  { margin-left: $gap-32; margin-right: $gap-32; }
+.mx-40  { margin-left: $gap-40; margin-right: $gap-40; }
+.mx-48  { margin-left: $gap-48; margin-right: $gap-48; }
+.mx-64  { margin-left: $gap-64; margin-right: $gap-64; }
+.mx-96  { margin-left: $gap-96; margin-right: $gap-96; }
+.mx-128 { margin-left: $gap-128; margin-right: $gap-128; }
+
+.my-8   { margin-top: $gap-8; margin-bottom: $gap-8; }
+.my-16  { margin-top: $gap-16; margin-bottom: $gap-16; }
+.my-24  { margin-top: $gap-24; margin-bottom: $gap-24; }
+.my-32  { margin-top: $gap-32; margin-bottom: $gap-32; }
+.my-40  { margin-top: $gap-40; margin-bottom: $gap-40; }
+.my-48  { margin-top: $gap-48; margin-bottom: $gap-48; }
+.my-64  { margin-top: $gap-64; margin-bottom: $gap-64; }
+.my-96  { margin-top: $gap-96; margin-bottom: $gap-96; }
+.my-128 { margin-top: $gap-128; margin-bottom: $gap-128; }
+
+// Paddings
+.p-8    { padding: $gap-8; }
+.p-16   { padding: $gap-16; }
+.p-24   { padding: $gap-24; }
+.p-32   { padding: $gap-32; }
+.p-40   { padding: $gap-40; }
+.p-48   { padding: $gap-48; }
+.p-64   { padding: $gap-64; }
+.p-96   { padding: $gap-96; }
+.p-128  { padding: $gap-128; }
+
+// Paddings - Top/Right/Bottom/Left
+.pt-8   { padding-top: $gap-8; }
+.pt-16  { padding-top: $gap-16; }
+.pt-24  { padding-top: $gap-24; }
+.pt-32  { padding-top: $gap-32; }
+.pt-40  { padding-top: $gap-40; }
+.pt-48  { padding-top: $gap-48; }
+.pt-64  { padding-top: $gap-64; }
+.pt-96  { padding-top: $gap-96; }
+.pt-128 { padding-top: $gap-128; }
+
+.pr-8   { padding-right: $gap-8; }
+.pr-16  { padding-right: $gap-16; }
+.pr-24  { padding-right: $gap-24; }
+.pr-32  { padding-right: $gap-32; }
+.pr-40  { padding-right: $gap-40; }
+.pr-48  { padding-right: $gap-48; }
+.pr-64  { padding-right: $gap-64; }
+.pr-96  { padding-right: $gap-96; }
+.pr-128 { padding-right: $gap-128; }
+
+.pb-8   { padding-bottom: $gap-8; }
+.pb-16  { padding-bottom: $gap-16; }
+.pb-24  { padding-bottom: $gap-24; }
+.pb-32  { padding-bottom: $gap-32; }
+.pb-40  { padding-bottom: $gap-40; }
+.pb-48  { padding-bottom: $gap-48; }
+.pb-64  { padding-bottom: $gap-64; }
+.pb-96  { padding-bottom: $gap-96; }
+.pb-128 { padding-bottom: $gap-128; }
+
+.pl-8   { padding-left: $gap-8; }
+.pl-16  { padding-left: $gap-16; }
+.pl-24  { padding-left: $gap-24; }
+.pl-32  { padding-left: $gap-32; }
+.pl-40  { padding-left: $gap-40; }
+.pl-48  { padding-left: $gap-48; }
+.pl-64  { padding-left: $gap-64; }
+.pl-96  { padding-left: $gap-96; }
+.pl-128 { padding-left: $gap-128; }
+
+// Paddings - Eixo X/Y
+.px-8   { padding-left: $gap-8; padding-right: $gap-8; }
+.px-16  { padding-left: $gap-16; padding-right: $gap-16; }
+.px-24  { padding-left: $gap-24; padding-right: $gap-24; }
+.px-32  { padding-left: $gap-32; padding-right: $gap-32; }
+.px-40  { padding-left: $gap-40; padding-right: $gap-40; }
+.px-48  { padding-left: $gap-48; padding-right: $gap-48; }
+.px-64  { padding-left: $gap-64; padding-right: $gap-64; }
+.px-96  { padding-left: $gap-96; padding-right: $gap-96; }
+.px-128 { padding-left: $gap-128; padding-right: $gap-128; }
+
+.py-8   { padding-top: $gap-8; padding-bottom: $gap-8; }
+.py-16  { padding-top: $gap-16; padding-bottom: $gap-16; }
+.py-24  { padding-top: $gap-24; padding-bottom: $gap-24; }
+.py-32  { padding-top: $gap-32; padding-bottom: $gap-32; }
+.py-40  { padding-top: $gap-40; padding-bottom: $gap-40; }
+.py-48  { padding-top: $gap-48; padding-bottom: $gap-48; }
+.py-64  { padding-top: $gap-64; padding-bottom: $gap-64; }
+.py-96  { padding-top: $gap-96; padding-bottom: $gap-96; }
+.py-128 { padding-top: $gap-128; padding-bottom: $gap-128; }

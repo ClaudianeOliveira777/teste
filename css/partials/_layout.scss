@@ -36,15 +36,78 @@ $container-mobile: 360px;   //Celulares pequenos
     }
 }
 
+// Definição do Mixin (JÁ ATUALIZADO)
+@mixin grid-responsive($device) {
+    display: grid;
+
+    @if $device == desktop {
+      
+        grid-template-columns: repeat(4, 1fr); // 4 colunas FIXAS no desktop
+      
+    }
+    @else if $device == tablet {
+      @media screen and (min-width: $container-tablet) and (max-width: $container-desktop) {
+        grid-template-columns: repeat(3, 1fr); // 3 colunas FIXAS no tablet
+      }
+    }
+    @else if $device == mobile {
+      @media screen and (max-width: $container-tablet) {
+        grid-template-columns: repeat(2, 1fr); // 2 colunas FIXAS no mobile
+      }
+    }
+  }
+
+ 
+.grid-categories{
+
+   @include grid-responsive(desktop);
+   gap: 8px;
+   max-width: 900px;
+   border: 2px solid red;
+   justify-content: center;
+   margin: 0 auto;
+
+   
+    @include responsive(mobile){
+        @include grid-responsive(mobile);
+    }
+
+}
+
+/*.grid {
+    display: grid;
+    
+  
+    &.grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      max-width: 900px;
+      border: 2px solid red;
+      justify-content: center;
+      margin: 0 auto;
+      
+    }
+  
+    &.grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 20px;
+    }
+  
+    &.grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }*/
+
 .container{
     max-width: $container-desktop;
     margin: 0 auto;
-    padding: 80px 24px;  //Talvez mudar para 124/128. 
-    border: 1px solid red;
+    padding: 24px;  //Talvez mudar para 124/128. 
+    
 
     @include responsive(mobile){
         flex-direction: column;
-        padding: 96px 16px;
-        border: 1px solid blue;
+        padding: 50px;
+        margin: 0;
+        
     }
 }
