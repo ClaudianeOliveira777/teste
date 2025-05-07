@@ -63,13 +63,14 @@ $container-mobile: 360px;   //Celulares pequenos
    @include grid-responsive(desktop);
    gap: 8px;
    max-width: 900px;
-   border: 2px solid red;
-   justify-content: center;
    margin: 0 auto;
+   justify-content: center;
+   
 
    
     @include responsive(mobile){
         @include grid-responsive(mobile);
+        
     }
 
 }
@@ -101,12 +102,12 @@ $container-mobile: 360px;   //Celulares pequenos
 .container{
     max-width: $container-desktop;
     margin: 0 auto;
-    padding: 24px;  //Talvez mudar para 124/128. 
+    padding: 16px;  //Talvez mudar para 124/128. 
     
 
     @include responsive(mobile){
         flex-direction: column;
-        padding: 50px;
+        padding: 16px;
         margin: 0;
         
     }

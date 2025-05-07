@@ -1,21 +1,33 @@
 @mixin typeface-title($size, $device) {
-  font-family: 'Sora', 'sans-serif';
+  
 
   
   //h1
   @if $size == h1 and $device == desktop {
-    font-size: 36px;
+   
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 44px;
     line-height: 100%;
   } @else if $size == h1 and $device == mobile {
-    font-size: 36px;
+   
+      
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
     line-height: 120%;
+  
   }
 
   //h2
   @else if $size == h2 and $device == desktop {
+    font-family: 'Sora', 'sans-serif';
     font-size: 52px;
     line-height: 100%;
   } @else if $size == h2 and $device == mobile {
+    font-family: 'Sora', 'sans-serif';
     font-size: 36px;
     line-height: 120%;
   }
@@ -97,6 +109,12 @@ p{
   @include typeface-body(m, desktop);
 }
 
+/*.teste{
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+}*/
+
 .h0 {
 
   
@@ -111,8 +129,13 @@ p{
   }
 }
 
-h1 {
+h1:not(.h0) {
   @include typeface-title(h1, desktop);
+
+  @include responsive(mobile){
+     @include typeface-title(h1, mobile);
+  }
+ 
 }
 
 h2 {

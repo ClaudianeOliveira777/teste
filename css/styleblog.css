@@ -14,9 +14,8 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
   max-width: 900px;
-  border: 2px solid red;
-  justify-content: center;
   margin: 0 auto;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .grid-categories {
@@ -55,12 +54,12 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 16px;
 }
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
-    padding: 50px;
+    padding: 16px;
     margin: 0;
   }
 }
@@ -76,26 +75,40 @@ p {
   line-height: 140%;
 }
 
+/*.teste{
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+}*/
 .h0 {
   color: white;
-  font-family: "Sora", "sans-serif";
   font-size: 68px;
   line-height: 100%;
   font-family: "P22MackinacProExtraBold";
 }
 @media screen and (max-width: 768px) {
   .h0 {
-    font-family: "Sora", "sans-serif";
     font-size: 64px;
     line-height: 120%;
     font-family: "P22MackinacProExtraBold";
   }
 }
 
-h1 {
-  font-family: "Sora", "sans-serif";
-  font-size: 36px;
+h1:not(.h0) {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 44px;
   line-height: 100%;
+}
+@media screen and (max-width: 768px) {
+  h1:not(.h0) {
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+  }
 }
 
 h2 {
@@ -105,7 +118,6 @@ h2 {
 }
 
 h3 {
-  font-family: "Sora", "sans-serif";
   font-size: 36px;
   line-height: 120%;
 }
@@ -115,12 +127,16 @@ h3 {
   text-align: center;
   padding: 48px 16px;
 }
-
-.woodspoon {
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 8px;
+  }
+}
+.hero .woodspoon {
   width: 35%;
 }
 @media screen and (max-width: 768px) {
-  .woodspoon {
+  .hero .woodspoon {
     width: 50%;
   }
 }
@@ -128,10 +144,10 @@ h3 {
 .bg-section {
   background-color: plum;
   text-align: center;
-  padding: 16px;
+  border: 1px solid red;
 }
 .bg-section p {
-  padding-top: 20px;
+  padding-top: 12px;
 }
 
 .food-category {
@@ -143,12 +159,24 @@ h3 {
   height: 120px;
   border-radius: 50%;
 }
+@media screen and (max-width: 768px) {
+  .food-category .category-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+}
 .food-category .category-img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .food-category .category-label {
   padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .food-category .category-label {
+    font-size: 16px;
+  }
 }
 
 header {
