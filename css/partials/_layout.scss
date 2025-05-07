@@ -70,6 +70,8 @@ $container-mobile: 360px;   //Celulares pequenos
    
     @include responsive(mobile){
         @include grid-responsive(mobile);
+
+        border: 2px solid aquamarine;
         
     }
 
