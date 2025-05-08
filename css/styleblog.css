@@ -16,46 +16,20 @@ body {
   max-width: 900px;
   margin: 0 auto;
   justify-content: center;
+  border: 2px solid red;
 }
 @media screen and (max-width: 768px) {
   .grid-categories {
     display: grid;
-    border: 2px solid aquamarine;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 768px) {
-  .grid-categories {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/*.grid {
-    display: grid;
-
-
-    &.grid-4 {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      max-width: 900px;
-      border: 2px solid red;
-      justify-content: center;
-      margin: 0 auto;
-
-    }
-
-    &.grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 20px;
-    }
-
-    &.grid-2 {
-      grid-template-columns: 1fr 1fr;
-    }
-  }*/
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 16px;
+  border: 5px solid green;
 }
 @media screen and (max-width: 768px) {
   .container {
@@ -63,6 +37,122 @@ body {
     padding: 16px;
     margin: 0;
   }
+}
+
+.bg-section-receitas {
+  background-color: #EDC4D6;
+  text-align: center;
+  padding: 40px 0; /* Adicionado espaçamento vertical */
+}
+
+/* Grid Principal - Layout 1+2 (destaque + secundários) */
+.grid-recipes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Layout dividido */
+  max-width: 1000px; /* Reduzido de 1100px para melhor proporção */
+  margin: 0 auto;
+  gap: 24px;
+  padding: 32px 16px;
+}
+@media screen and (max-width: 768px) {
+  .grid-recipes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card Destaque - Valores profissionais */
+.featured-card {
+  background: white;
+  border-radius: 20px 20px 0px 20px; /* Superior-esquerdo, superior-direito, inferior-direito, inferior-esquerdo */
+  overflow: hidden;
+  width: 100%;
+  max-width: 380px; /* Reduzido de 500px */
+  height: auto; /* Altura flexível */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+  transition: transform 0.3s ease;
+  margin-left: 50px;
+}
+.featured-card:hover {
+  transform: translateY(-5px); /* Efeito hover */
+}
+.featured-card img {
+  width: 100%;
+  height: 240px; /* Reduzido de 420px */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.featured-card .card-content {
+  padding: 20px;
+}
+
+/* Grid Secundário */
+.grid-secundarias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-content: start; /* Alinha no topo */
+}
+@media screen and (max-width: 768px) {
+  .grid-secundarias {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards Secundários - Padrão profissional */
+.card {
+  background-color: white;
+  width: 100%;
+  max-width: 240px; /* Reduzido de 250px */
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+.card img {
+  width: 100%;
+  height: 160px; /* Ajustado de 180px */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Conteúdo dos Cards (comum a ambos) */
+.card-content {
+  padding: 16px;
+}
+.card-content a {
+  color: #2e7d32;
+  font-weight: 600; /* Semi-bold */
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+}
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+.card-title {
+  padding: 12px 0 8px;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.label {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-family: "Sora";
+  font-weight: 500;
+  font-size: 0.8rem; /* 12-13px */
+  text-transform: uppercase; /* Padrão profissional */
+  letter-spacing: 0.5px;
 }
 
 @font-face {
@@ -96,7 +186,7 @@ p {
 }
 
 h1:not(.h0) {
-  font-family: "Playfair Display";
+  font-family: "Lora";
   font-style: italic;
   font-weight: 400;
   font-size: 44px;
@@ -104,7 +194,7 @@ h1:not(.h0) {
 }
 @media screen and (max-width: 768px) {
   h1:not(.h0) {
-    font-family: "Playfair Display";
+    font-family: "Lora";
     font-style: italic;
     font-weight: 400;
     font-size: 32px;
@@ -119,8 +209,15 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
+  font-family: "Sora", "sans-serif";
+  font-size: 32px;
   line-height: 120%;
+}
+
+h4 {
+  font-family: "Sora", "sans-serif";
+  font-size: 24px;
+  line-height: 130%;
 }
 
 .hero {
@@ -130,7 +227,7 @@ h3 {
 }
 @media screen and (max-width: 768px) {
   .hero {
-    padding: 8px;
+    padding: 48px;
   }
 }
 .hero .woodspoon {
@@ -142,12 +239,12 @@ h3 {
   }
 }
 
-.bg-section {
+.bg-section-02 {
   background-color: plum;
   text-align: center;
   border: 1px solid red;
 }
-.bg-section p {
+.bg-section-02 p {
   padding-top: 12px;
 }
 
@@ -156,14 +253,14 @@ h3 {
   width: 190px;
 }
 .food-category .category-img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
 @media screen and (max-width: 768px) {
   .food-category .category-img {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
   }
 }
@@ -183,6 +280,7 @@ h3 {
 header {
   background-color: #fce4ec;
   height: 88px;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -224,8 +322,6 @@ a {
   cursor: pointer;
   text-decoration: none;
   font-family: "Sora", sans-serif;
-  font-size: 20px;
-  line-height: 140%;
 }
 
 /* SubList */
@@ -261,7 +357,6 @@ a {
     order: -1;
     margin: 0;
     width: 24px;
-    border: 1px solid red;
   }
 }
 
@@ -318,10 +413,11 @@ a {
 }
 
 .menu-mobile-item {
-  position: fixed; /* Mude de absolute para fixed, pq?? */
+  position: absolute;
   top: 88px; /* Altura do header */
   left: 0; /* Colado no canto esquerdo */
   width: 250px; /* Ou um valor fixo como 250px */
+  height: calc(100vh - 88px);
   background-color: #fce4ec;
   list-style: none;
   margin: 0;
@@ -340,7 +436,6 @@ a {
 }
 .sub-list-mobile .sub-list-link {
   padding: 15px 15px;
-  white-space: nowrap;
 }
 
 .menu-mobile-item.active {

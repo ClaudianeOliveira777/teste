@@ -1,0 +1,120 @@
+.bg-section-receitas {
+    background-color: #EDC4D6;
+    text-align: center;
+    padding: 40px 0; /* Adicionado espaçamento vertical */
+}
+
+/* Grid Principal - Layout 1+2 (destaque + secundários) */
+.grid-recipes {
+    
+    @include grid-responsive(2); /* Layout dividido */
+    max-width: 1000px; /* Reduzido de 1100px para melhor proporção */
+    margin: 0 auto;
+    gap: 24px;
+    padding: 32px 16px;
+   
+
+    @include responsive(mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card Destaque - Valores profissionais */
+.featured-card {
+    background: white;
+    border-radius: 20px 20px 0px 20px; /* Superior-esquerdo, superior-direito, inferior-direito, inferior-esquerdo */
+    overflow: hidden;
+    width: 100%;
+    max-width: 380px; /* Reduzido de 500px */
+    height: auto; /* Altura flexível */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra sutil */
+    transition: transform 0.3s ease;
+    margin-left: 50px;
+    
+    
+
+    &:hover {
+        transform: translateY(-5px); /* Efeito hover */
+    }
+
+    img {
+        width: 100%;
+        height: 240px; /* Reduzido de 420px */
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+}
+
+/* Grid Secundário */
+.grid-secundarias {
+    
+    @include grid-responsive(2);
+    gap: 20px;
+    align-content: start; /* Alinha no topo */
+
+    @include responsive(mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Cards Secundários - Padrão profissional */
+.card {
+    background-color: white;
+    width: 100%;
+    max-width: 240px; /* Reduzido de 250px */
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    img {
+        width: 100%;
+        height: 160px; /* Ajustado de 180px */
+        object-fit: cover;
+    }
+}
+
+/* Conteúdo dos Cards (comum a ambos) */
+.card-content {
+    padding: 16px;
+    
+    a {
+        color: #2e7d32;
+        font-weight: 600; /* Semi-bold */
+        display: inline-block;
+        margin-top: 12px;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.card-title {
+    padding: 12px 0 8px;
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.label {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-family: 'Sora';
+    font-weight: 500;
+    font-size: 0.8rem; /* 12-13px */
+    text-transform: uppercase; /* Padrão profissional */
+    letter-spacing: 0.5px;
+}

@@ -5,7 +5,7 @@
     padding: 48px 16px;
 
     @include responsive(mobile){
-        padding:8px;
+        padding:48px;
     }
 
     .woodspoon{
@@ -20,7 +20,7 @@
 
 
 
-.bg-section{
+.bg-section-02{
     background-color: plum;
     text-align: center;
    border: 1px solid red;
@@ -42,13 +42,13 @@
 
 
     .category-img{
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
 
         @include responsive(mobile){
-            width: 90px;
-            height: 90px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
         }
            
@@ -70,3 +70,8 @@
     }
 
 }
+
+
+
+
+

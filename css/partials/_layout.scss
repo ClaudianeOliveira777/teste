@@ -36,75 +36,50 @@ $container-mobile: 360px;   //Celulares pequenos
     }
 }
 
-// Definição do Mixin (JÁ ATUALIZADO)
-@mixin grid-responsive($device) {
-    display: grid;
 
-    @if $device == desktop {
-      
-        grid-template-columns: repeat(4, 1fr); // 4 colunas FIXAS no desktop
-      
+@mixin grid-responsive($columns) {
+    display: grid;
+   
+    
+    @if $columns == 4 {
+        grid-template-columns: repeat(4, 1fr);
     }
-    @else if $device == tablet {
-      @media screen and (min-width: $container-tablet) and (max-width: $container-desktop) {
-        grid-template-columns: repeat(3, 1fr); // 3 colunas FIXAS no tablet
-      }
+    @else if $columns == 3 {
+        grid-template-columns: repeat(3, 1fr);
     }
-    @else if $device == mobile {
-      @media screen and (max-width: $container-tablet) {
-        grid-template-columns: repeat(2, 1fr); // 2 colunas FIXAS no mobile
-      }
+    @else if $columns == 2 {
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
+}
 
  
 .grid-categories{
 
-   @include grid-responsive(desktop);
-   gap: 8px;
-   max-width: 900px;
-   margin: 0 auto;
-   justify-content: center;
+
+    @include grid-responsive(4);
+    gap: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-content: center;
+    border: 2px solid red;
    
 
    
     @include responsive(mobile){
-        @include grid-responsive(mobile);
+        @include grid-responsive(2);
 
-        border: 2px solid aquamarine;
+        
         
     }
 
 }
 
-/*.grid {
-    display: grid;
-    
-  
-    &.grid-4 {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      max-width: 900px;
-      border: 2px solid red;
-      justify-content: center;
-      margin: 0 auto;
-      
-    }
-  
-    &.grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 20px;
-    }
-  
-    &.grid-2 {
-      grid-template-columns: 1fr 1fr;
-    }
-  }*/
-
 .container{
     max-width: $container-desktop;
     margin: 0 auto;
-    padding: 16px;  //Talvez mudar para 124/128. 
+    padding: 16px;  //Talvez mudar para 124/128.
+    
+    border: 5px solid green;
     
 
     @include responsive(mobile){
@@ -114,3 +89,5 @@ $container-mobile: 360px;   //Celulares pequenos
         
     }
 }
+
+

@@ -4,6 +4,7 @@
 header {
     background-color: $pink-light;
     height: 88px;
+    position: relative;
     display: flex;
     justify-content: space-between;  // Distribui os itens de forma espaçada no header
     align-items: center;
@@ -11,6 +12,7 @@ header {
 
     @include responsive(mobile){
         padding: 24px;
+       
     }
     
 
@@ -83,6 +85,7 @@ a {
 .menu-mobile{
     
     display: none;
+    
    
     
 
@@ -94,7 +97,7 @@ a {
         
         
        
-        border: 1px solid red;
+        
         
         
     }
@@ -180,18 +183,25 @@ a {
   } 
   
   .menu-mobile-item {
-    position: fixed; /* Mude de absolute para fixed, pq?? */
+    position: absolute; 
     top: 88px; /* Altura do header */
     left: 0; /* Colado no canto esquerdo */
-    width: 250px; /* Ou um valor fixo como 250px */
+    width:250px; /* Ou um valor fixo como 250px */
+    height: calc(100vh - 88px); //<<<
+   
     background-color: $pink-light;
     list-style: none;
+  
+   
+   
   
     
     margin: 0;
     display: none;
     transition: transform 0.3s ease;
     z-index: 100;
+
+    
 
     
 }
@@ -201,16 +211,18 @@ a {
 .menu-mobile-item li {
     padding: 15px 25px;
     
+  
 }
 
 .sub-list-mobile {
     padding-left: 0;
     margin-top: 5px;
+   
  
 
     .sub-list-link{
         padding: 15px 15px;
-        white-space: nowrap;
+        
     }
 }
   

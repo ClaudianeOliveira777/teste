@@ -5,7 +5,7 @@
   //h1
   @if $size == h1 and $device == desktop {
    
-    font-family: 'Playfair Display';
+    font-family: 'Lora';
     font-style: italic;
     font-weight: 400;
     font-size: 44px;
@@ -13,7 +13,7 @@
   } @else if $size == h1 and $device == mobile {
    
       
-    font-family: 'Playfair Display';
+    font-family: 'Lora';
     font-style: italic;
     font-weight: 400;
     font-size: 32px;
@@ -34,7 +34,8 @@
 
   //h3
   @else if $size == h3 and $device == desktop {
-    font-size: 36px;
+    font-family: 'Sora', 'sans-serif';
+    font-size: 32px;
     line-height: 120%;
   } @else if $size == h3 and $device == desktop {
     font-size: 24px;
@@ -43,9 +44,11 @@
 
   //h4
   @else if $size == h4 and $device == desktop {
+    font-family: 'Sora', 'sans-serif';
     font-size: 24px;
     line-height: 130%;
   } @else if $size == h4 and $device == mobile {
+    font-family: 'Sora', 'sans-serif';
     font-size: 18px;
     line-height: 130%;
   }
@@ -78,19 +81,19 @@
   font-family: 'Sora', sans-serif;
 
   //Medium
-  @if $size == m and $device == desktop {
+  @if $size == p2 and $device == desktop {
     font-size: 20px;
     line-height: 140%;
-  } @else if $size == m and $device == mobile {
+  } @else if $size == p2 and $device == mobile {
     font-size: 14px;
     line-height: 150%;
   }
 
   //Small
-  @else if $size == s and $device == desktop {
+  @else if $size == p3 and $device == desktop {
     font-size: 14px;
     line-height: 150%;
-  } @else if $size == s and $device == mobile {
+  } @else if $size == p3 and $device == mobile {
     font-family: 14px;
     line-height: 150%;
   }
@@ -106,7 +109,7 @@
 }
 
 p{
-  @include typeface-body(m, desktop);
+  @include typeface-body(p2, desktop);
 }
 
 /*.teste{
@@ -145,3 +148,8 @@ h2 {
 h3 {
   @include typeface-title(h3, desktop);
 }
+
+h4{
+  @include typeface-title(h4, desktop);
+}
+
