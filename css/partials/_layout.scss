@@ -50,6 +50,9 @@ $container-mobile: 360px;   //Celulares pequenos
     @else if $columns == 2 {
         grid-template-columns: repeat(2, 1fr);
     }
+    @else if $columns == 1{
+        grid-template-columns: 1fr;
+    }
 }
 
  
@@ -61,7 +64,7 @@ $container-mobile: 360px;   //Celulares pequenos
     max-width: 900px;
     margin: 0 auto;
     justify-content: center;
-    border: 2px solid red;
+    
    
 
    
@@ -74,12 +77,15 @@ $container-mobile: 360px;   //Celulares pequenos
 
 }
 
+
+
+
 .container{
     max-width: $container-desktop;
     margin: 0 auto;
     padding: 16px;  //Talvez mudar para 124/128.
     
-    border: 5px solid green;
+    
     
 
     @include responsive(mobile){
@@ -89,5 +95,12 @@ $container-mobile: 360px;   //Celulares pequenos
         
     }
 }
+
+
+
+
+
+
+
 
 

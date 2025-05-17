@@ -1,88 +1,100 @@
 @mixin typeface-title($size, $device) {
-  
-
-  
-  //h1
-  @if $size == h1 and $device == desktop {
-   
-    font-family: 'Lora';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 44px;
+  // h0 - Título Principal / Hero
+  @if $size == h0 and $device == desktop {
+    font-family: 'P22MackinacProExtraBold', serif;
+    font-weight: 800;
+    font-size: 72px;
     line-height: 100%;
-  } @else if $size == h1 and $device == mobile {
-   
-      
-    font-family: 'Lora';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 120%;
-  
   }
-
-  //h2
-  @else if $size == h2 and $device == desktop {
-    font-family: 'Sora', 'sans-serif';
+  @else if $size == h0 and $device == mobile {
+    font-family: 'P22MackinacProExtraBold', serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 110%;
+  }
+  
+  // h1 - Título de Seção
+  @else if $size == h1 and $device == desktop {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 500;
     font-size: 52px;
-    line-height: 100%;
-  } @else if $size == h2 and $device == mobile {
-    font-family: 'Sora', 'sans-serif';
-    font-size: 36px;
-    line-height: 120%;
+    line-height: 110%;
   }
-
-  //h3
-  @else if $size == h3 and $device == desktop {
-    font-family: 'Sora', 'sans-serif';
+  @else if $size == h1 and $device == mobile {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 500;
     font-size: 32px;
     line-height: 120%;
-  } @else if $size == h3 and $device == desktop {
+  }
+  
+  // h2 - Subtítulo Principal
+  @else if $size == h2 and $device == desktop {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 38px;
+    line-height: 120%;
+  }
+  @else if $size == h2 and $device == mobile {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 130%;
+  }
+  
+  // h3 - Título de Componente
+  @else if $size == h3 and $device == desktop {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+  }
+  @else if $size == h3 and $device == mobile {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
     font-size: 24px;
     line-height: 130%;
   }
-
-  //h4
+  
+  // h4 - Subtítulo de Componente
   @else if $size == h4 and $device == desktop {
-    font-family: 'Sora', 'sans-serif';
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
     font-size: 24px;
-    line-height: 130%;
-  } @else if $size == h4 and $device == mobile {
-    font-family: 'Sora', 'sans-serif';
-    font-size: 18px;
-    line-height: 130%;
-  }
-
-  //h5
-  @else if $size == h5 and $device == desktop {
-    font-size: 18px;
     line-height: 140%;
-  } @else if $size == h5 and $device == mobile {
+  }
+  @else if $size == h4 and $device == mobile {
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+  }
+  
+  // h5 - Título de Destaque
+  @else if $size == h5 and $device == desktop {
+    font-family: 'Sora', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  @else if $size == h5 and $device == mobile {
+    font-family: 'Sora', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 150%;
   }
-
-
-  //h0
-  @else if $size == h0 and $device == desktop{
-    font-size: 68px;
-    line-height: 100%;
-    font-family: 'P22MackinacProExtraBold';
-  } @else if $size == h0 and $device == mobile{
-    font-size: 64px;
-    line-height: 120%;
-    font-family: 'P22MackinacProExtraBold';
-  }
-
-
 }
 
 @mixin typeface-body($size, $device) {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Lora', sans-serif;
+  font-weight: 500;
 
   //Medium
   @if $size == p2 and $device == desktop {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 140%;
   } @else if $size == p2 and $device == mobile {
     font-size: 14px;
