@@ -9,21 +9,6 @@ body {
   background-color: papayawhip; /* #151B26*/
 }
 
-.grid-categories {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  max-width: 900px;
-  margin: 0 auto;
-  justify-content: center;
-}
-@media screen and (max-width: 768px) {
-  .grid-categories {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -62,14 +47,8 @@ body {
 }
 
 .content a {
-  color: #2e7d32;
   font-weight: 500;
-  display: flex;
-  justify-content: flex-end;
   font-size: 18px;
-}
-.content a:hover {
-  text-decoration: underline;
 }
 
 .week-label {
@@ -86,6 +65,15 @@ body {
   line-height: 1.2;
   margin-bottom: 20px;
   font-weight: 500;
+}
+
+.read-more {
+  color: #2e7d32;
+  display: flex;
+  justify-content: flex-end;
+}
+.read-more:hover {
+  text-decoration: underline;
 }
 
 .content p {
@@ -190,7 +178,7 @@ h2 {
   transition: 0.5s ease;
 }
 .card-content a:hover {
-  color: white;
+  text-decoration: underline;
 }
 
 /* Ícones SVG das tags */
@@ -209,6 +197,60 @@ h2 {
   -o-object-fit: contain;
      object-fit: contain;
   flex-shrink: 0;
+}
+
+/* Classe para a borda decorativa simples */
+.fancy-border {
+  position: relative;
+  padding: 15px 0;
+  margin: 30px 0;
+}
+
+.fancy-border::before {
+  content: "";
+  position: absolute;
+  width: 900px;
+  top: 39px;
+  left: 370px;
+  right: 0;
+  height: 1px;
+  background-color: black; /* Cor azul similar à da imagem */
+  border-radius: 1px;
+  transform: translateY(-50%);
+}
+
+/* Classe para borda decorativa com texto */
+.fancy-border-with-text {
+  position: relative;
+  padding: 15px 0;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.fancy-border-with-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #0066cc; /* Cor azul similar à da imagem */
+  border-radius: 3px;
+  transform: translateY(-50%);
+}
+
+/* Estilo para o texto centralizado na borda */
+.fancy-border-text {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  background-color: #3a7e4f; /* Verde similar ao botão na imagem */
+  color: white;
+  padding: 8px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
 }
 
 .sections-block {
@@ -316,7 +358,7 @@ h2 {
   }
 }
 .hero {
-  background-color: #f9b4c9;
+  background-image: url("../../assets/background.avif");
   text-align: center;
   padding: 48px 16px;
 }
@@ -342,12 +384,29 @@ h2 {
   padding-top: 12px;
 }
 
+.grid-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .grid-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .food-category {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 120px;
   border: 2px solid red;
+  margin: 8px;
 }
 .food-category .category-img {
   width: 50px;
@@ -430,6 +489,80 @@ h4 {
   font-weight: 500;
   font-size: 24px;
   line-height: 140%;
+}
+
+.recipe-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.recipe-page .recipe-title {
+  font-family: "P22MackinacProExtraBold";
+  font-style: normal;
+  font-size: 46px;
+  text-align: center;
+}
+.recipe-page .recipe-categories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px solid red;
+}
+.recipe-page .recipe-categories .category-tag {
+  background: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+.recipe-page .recipe-image img {
+  width: 90%;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.recipe-page .recipe-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 32px;
+  padding-top: 16px;
+  border: 1px solid green;
+}
+.recipe-page .recipe-content .ingredients, .recipe-page .recipe-content .instructions {
+  padding: 16px;
+  border-radius: 8px;
+}
+.recipe-page .recipe-content .ingredients h2, .recipe-page .recipe-content .instructions h2 {
+  font-family: "P22MackinacProExtraBold";
+  font-style: normal;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.recipe-page .recipe-content .ingredients ul, .recipe-page .recipe-content .ingredients ol, .recipe-page .recipe-content .instructions ul, .recipe-page .recipe-content .instructions ol {
+  list-style: none;
+  padding: 0;
+}
+.recipe-page .recipe-content .ingredients ul li, .recipe-page .recipe-content .ingredients ol li, .recipe-page .recipe-content .instructions ul li, .recipe-page .recipe-content .instructions ol li {
+  margin-bottom: 0.75rem;
+}
+.recipe-page .recipe-content .ingredients ul li label, .recipe-page .recipe-content .ingredients ol li label, .recipe-page .recipe-content .instructions ul li label, .recipe-page .recipe-content .instructions ol li label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Sora";
+}
+.recipe-page .recipe-content .ingredients ul li input[type=checkbox], .recipe-page .recipe-content .ingredients ol li input[type=checkbox], .recipe-page .recipe-content .instructions ul li input[type=checkbox], .recipe-page .recipe-content .instructions ol li input[type=checkbox] {
+  accent-color: #c8e6cc;
+  transform: scale(1.2);
+}
+.recipe-page .recipe-content .instructions {
+  max-width: 600px;
 }
 
 header {

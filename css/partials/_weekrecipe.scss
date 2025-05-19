@@ -20,15 +20,12 @@
 }
 
 .content a {
-  color: #2e7d32; //tem q mudar. uma classe p as duas tags <a>.
+  
   font-weight: 500;
-  display: flex;
-  justify-content: flex-end;
+
   font-size: 18px;
 
-  &:hover {
-    text-decoration: underline;
-  }
+ 
 }
 
 .week-label {
@@ -46,6 +43,16 @@
   margin-bottom: 20px;
   
   font-weight: 500; //ok?
+}
+
+.read-more{
+  color: #2e7d32;
+  display: flex;
+  justify-content: flex-end;
+
+  &:hover{
+    text-decoration: underline;
+  }
 }
 
 .content p {

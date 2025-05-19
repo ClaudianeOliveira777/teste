@@ -78,7 +78,7 @@ h2 {
   transition: 0.5s ease;
 
   &:hover {
-    color: white;
+    text-decoration: underline;
   }
 }
 
@@ -99,4 +99,67 @@ h2 {
   display: inline-block;
   object-fit: contain;
   flex-shrink: 0;
+  
+}
+
+
+
+
+
+
+
+//
+/* Classe para a borda decorativa simples */
+.fancy-border {
+  position: relative;
+  padding: 15px 0;
+  margin: 30px 0;
+  
+}
+
+.fancy-border::before {
+  content: "";
+  position: absolute;
+  width: 900px;
+  top: 39px;
+  left: 370px;
+  right: 0;
+  height: 1px;
+  background-color: black; /* Cor azul similar à da imagem */
+  border-radius: 1px;
+  transform: translateY(-50%);
+}
+
+/* Classe para borda decorativa com texto */
+.fancy-border-with-text {
+  position: relative;
+  padding: 15px 0;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.fancy-border-with-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #0066cc; /* Cor azul similar à da imagem */
+  border-radius: 3px;
+  transform: translateY(-50%);
+}
+
+/* Estilo para o texto centralizado na borda */
+.fancy-border-text {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  background-color: #3a7e4f; /* Verde similar ao botão na imagem */
+  color: white;
+  padding: 8px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
 }
