@@ -8,8 +8,9 @@
   width: 100%;
   
   .recipe-title {
-    font-family: "P22MackinacProExtraBold";
-        font-style: normal;
+    font-family: "Lora";
+        font-style: italic;
+        font-weight: 500;
         font-size: 46px;
     text-align: center;
   }
@@ -17,14 +18,14 @@
   .recipe-categories {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    border: 1px solid red;
-    
-    .category-tag {
-      background: #eee;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
+    gap: 18px;
+   
+    padding-bottom: 12px;
+    padding-top: 12px;
+
+    .category-icon{
+        width: 40px;
+        height: 40px;
     }
   }
   
@@ -39,23 +40,22 @@
   
   .recipe-content {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 32px;
-    padding-top: 16px;
-
-    border: 1px solid green;
+    grid-template-columns: 2fr 2fr;
     
+    border: 1px solid green;
+    padding-top: 12px;
+    padding-left: 50px;
+   
+
     .ingredients, .instructions {
       
-      padding: 16px;
-      border-radius: 8px;
-      
+      padding: 12px;
+
       h2 {
-        font-family: "P22MackinacProExtraBold";
-        font-style: normal;
         
+        font-weight: 500;
         font-size: 30px;
-        margin-bottom: 1rem;
+        margin-bottom: 16px;
       }
       
       ul, ol {
@@ -63,16 +63,9 @@
         padding: 0;
         
         li {
-          margin-bottom: 0.75rem;
+          margin-bottom: 18px;
           
-          label {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            cursor: pointer;
-            font-size: 16px;
-            font-family: 'Sora';
-          }
+          
           
           input[type="checkbox"] {
             accent-color: #c8e6cc;
@@ -81,9 +74,38 @@
         }
       }
     }
-    
-    .instructions {
-      max-width: 600px;
-    }
+
   }
 }
+
+.instructions {
+      max-width: 500px;
+    }
+
+.recipe-step {
+display: flex;
+align-items: center;
+gap: 8px;
+cursor: pointer;
+font-size: 16px;
+font-family: 'Sora';
+}
+
+
+
+.share-options{
+    text-align: center;
+
+   
+}
+
+.share-icons{
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 5px;
+    border: 1px solid green;
+}
+
+
+
+

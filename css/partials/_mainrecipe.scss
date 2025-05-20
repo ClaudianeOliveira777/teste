@@ -1,165 +1,129 @@
 .bg-section-receitas {
-  background-color: #b7c2b0;
-
-}
-
-h2 {
-  
-  color: #2e2e2e;
-}
-
-/* Grid Principal */
-.grid-recipes {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 20px;
-  padding: 16px;
-
-  @include responsive(tablet) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include responsive(mobile) {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Imagens principais */
-.recipe-img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  display: block;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.card {
+  padding: 30px 0;
   background-color: #FFFAF0;
-  width: 100%;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-  overflow: hidden;
-  position: relative;
+}
 
-  &:hover {
-    transform: translateY(-3px);
-  }
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
 
-  .card-content {
-    padding: 12px;
-    text-align: left;
-    border-left: 1px solid #e0e0e0;
-    border-right: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
+.recipe-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .recipe-container {
     display: flex;
     flex-direction: column;
-    min-height: 165px;
   }
+}
+
+.recipe-item {
+  display: flex;
+  align-items: stretch;
+  background-color: #FFFAF0;
+  border: 1px solid #e0e0e0;
+  
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.recipe-item:hover {
+  background-color: #ffead1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.circle-clip {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #FFFAF0;
+  clip-path: circle(17px at center);
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+.recipe-item:hover .circle-clip {
+  background-color: #ffead1;
+}
+
+.recipe-content {
+  flex-grow: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recipe-title {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .card-description {
-  font-size: 15px;
-  color: #3D3D3D;
+  color: #666;
+  font-size: 14px;
   margin-bottom: 5px;
-  flex-grow: 1;
 }
 
-.card-content a {
-  color: #2e7d32;
-  font-weight: 600;
-  display: block;
-  margin-top: auto;
-  padding: 6px 0;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.5s ease;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-/* Ícones SVG das tags */
-.tag-container {
+.recipe-tags {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 4px;
-  margin-bottom: 4px;
- 
+  gap: 8px;
+  margin-top: 5px;
+}
 
+.tag {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+
+
+
+
+/* Ícones SVG das tags         >>>> INTERESSANTEEEE
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px; // Reduzido de 6px
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .tag-icon {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  object-fit: contain;
-  flex-shrink: 0;
-  
-}
-
-
-
-
-
-
-
-//
-/* Classe para a borda decorativa simples */
-.fancy-border {
-  position: relative;
-  padding: 15px 0;
-  margin: 30px 0;
-  
-}
-
-.fancy-border::before {
-  content: "";
-  position: absolute;
-  width: 900px;
-  top: 39px;
-  left: 370px;
-  right: 0;
-  height: 1px;
-  background-color: black; /* Cor azul similar à da imagem */
-  border-radius: 1px;
-  transform: translateY(-50%);
-}
-
-/* Classe para borda decorativa com texto */
-.fancy-border-with-text {
-  position: relative;
-  padding: 15px 0;
-  margin: 30px 0;
-  text-align: center;
-}
-
-.fancy-border-with-text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #0066cc; /* Cor azul similar à da imagem */
-  border-radius: 3px;
-  transform: translateY(-50%);
-}
-
-/* Estilo para o texto centralizado na borda */
-.fancy-border-text {
-  display: inline-block;
-  position: relative;
-  top: -15px;
-  background-color: #3a7e4f; /* Verde similar ao botão na imagem */
-  color: white;
-  padding: 8px 20px;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 3px;
-}
+    width: 24px; // Reduzido de 30px
+    height: 24px; // Reduzido de 30px
+    display: inline-block;
+    object-fit: contain;
+    flex-shrink: 0;
+}*/
