@@ -88,16 +88,11 @@ body {
   background-color: peachpuff;
 }
 
-.container h2 {
-  color: #333;
-}
-
 .recipe-container {
   margin-top: 15px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  border: 1px solid purple;
 }
 @media screen and (max-width: 768px) {
   .recipe-container {
@@ -109,19 +104,25 @@ body {
 }
 
 .recipe-item {
+  border: 1px solid red;
   display: flex;
   align-items: stretch;
   background-color: #FFFAF0;
-  border: 1px solid #e0e0e0;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
+  /* Hover no card inteiro */
 }
-
 .recipe-item:hover {
-  background-color: #ffead1;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  background-color: #2e7d32;
+  /* Mudança de cor para todos elementos de texto */
+  /* Cor do círculo no hover */
+}
+.recipe-item:hover h3, .recipe-item:hover p {
+  color: #ffffff;
+}
+.recipe-item:hover .circle-clip {
+  background-color: #2e7d32;
 }
 
 .image-wrapper {
@@ -144,17 +145,13 @@ body {
   right: -30px;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: #FFFAF0;
   -webkit-clip-path: circle(17px at center);
           clip-path: circle(17px at center);
   z-index: 2;
   transition: background-color 0.3s ease;
-}
-
-.recipe-item:hover .circle-clip {
-  background-color: #ffead1;
 }
 
 .recipe-content {
@@ -165,19 +162,25 @@ body {
   justify-content: space-between;
 }
 
-.recipe-title {
-  font-family: "Lora", serif;
-  font-size: 18px;
+/* Estilos para todos os elementos de texto */
+.recipe-content h3 {
   color: #333;
   margin-bottom: 5px;
   font-weight: 500;
   line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
 .card-description {
-  color: #666;
+  padding: 18px;
   font-size: 14px;
   margin-bottom: 5px;
+}
+
+.card-description p {
+  color: #333;
+  transition: color 0.3s ease;
+  margin: 0;
 }
 
 .recipe-tags {
@@ -187,26 +190,10 @@ body {
 }
 
 .tag {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
-/* Ícones SVG das tags         >>>> INTERESSANTEEEE
-.tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px; // Reduzido de 6px
-    margin-top: 3px;
-    margin-bottom: 3px;
-}
-
-.tag-icon {
-    width: 24px; // Reduzido de 30px
-    height: 24px; // Reduzido de 30px
-    display: inline-block;
-    object-fit: contain;
-    flex-shrink: 0;
-}*/
 .sections-block {
   padding: 10px 0;
   position: relative;
@@ -242,11 +229,6 @@ body {
   line-height: 1.2;
   margin-bottom: 12px;
   margin-top: 12px;
-}
-.sections-content p {
-  line-height: 1.6;
-  margin-bottom: 8px;
-  color: #444;
 }
 
 .week-label {
@@ -386,36 +368,33 @@ p {
   font-family: "Lora", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 160%;
+  color: #333;
+  /*color: #444;*/
 }
 
-/*.teste{
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 400;
-}*/
 .h0 {
   color: white;
   font-family: "P22MackinacProExtraBold", serif;
   font-weight: 800;
-  font-size: 72px;
-  line-height: 100%;
+  font-size: 64px;
+  line-height: 110%;
 }
 @media screen and (max-width: 768px) {
   .h0 {
     font-family: "P22MackinacProExtraBold", serif;
     font-weight: 800;
-    font-size: 48px;
-    line-height: 110%;
+    font-size: 40px;
+    line-height: 115%;
   }
 }
 
 h1:not(.h0) {
   font-family: "Lora", serif;
   font-style: italic;
-  font-weight: 500;
-  font-size: 52px;
-  line-height: 110%;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 120%;
 }
 @media screen and (max-width: 768px) {
   h1:not(.h0) {
@@ -423,39 +402,61 @@ h1:not(.h0) {
     font-style: italic;
     font-weight: 500;
     font-size: 32px;
-    line-height: 120%;
+    line-height: 125%;
   }
 }
 
 h2 {
-  font-family: "Lora", serif;
+  color: #444;
+  font-family: "Playfair Display", serif;
   font-style: italic;
-  font-weight: 500;
-  font-size: 38px;
-  line-height: 120%;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
 }
 @media screen and (max-width: 768px) {
   h2 {
     font-family: "Lora", serif;
     font-style: italic;
     font-weight: 500;
-    font-size: 32px;
-    line-height: 130%;
+    font-size: 28px;
+    line-height: 135%;
   }
 }
 
 h3 {
-  font-family: "Sora", sans-serif;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 130%;
+  font-family: "Lora", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  font-family: "Lora", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
 }
 
 h4 {
-  font-family: "Sora", sans-serif;
+  font-family: "Lora", sans-serif;
+  font-style: italic;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 140%;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+h5 {
+  font-family: "Lora", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 160%;
+}
+@media screen and (max-width: 768px) {
+  h5 {
+    font-family: "Lora", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+  }
 }
 
 .recipe-page {
@@ -467,8 +468,10 @@ h4 {
   margin: 0 auto;
   width: 100%;
 }
-.recipe-page .recipe-title {
+.recipe-page .recipe-page-title {
   text-align: center;
+  font-weight: 500;
+  font-size: 45px;
 }
 .recipe-page .recipe-categories {
   display: flex;
@@ -482,8 +485,8 @@ h4 {
   height: 40px;
 }
 .recipe-page .recipe-image img {
-  width: 90%;
-  max-height: 400px;
+  width: 100%;
+  max-height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
@@ -495,23 +498,20 @@ h4 {
   padding-top: 12px;
   padding-left: 50px;
 }
-.recipe-page .recipe-content .ingredients, .recipe-page .recipe-content .instructions {
-  padding: 12px;
-}
 .recipe-page .recipe-content .ingredients ul, .recipe-page .recipe-content .ingredients ol, .recipe-page .recipe-content .instructions ul, .recipe-page .recipe-content .instructions ol {
   list-style: none;
-  padding: 0;
 }
 .recipe-page .recipe-content .ingredients ul li, .recipe-page .recipe-content .ingredients ol li, .recipe-page .recipe-content .instructions ul li, .recipe-page .recipe-content .instructions ol li {
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 }
 .recipe-page .recipe-content .ingredients ul li input[type=checkbox], .recipe-page .recipe-content .ingredients ol li input[type=checkbox], .recipe-page .recipe-content .instructions ul li input[type=checkbox], .recipe-page .recipe-content .instructions ol li input[type=checkbox] {
   accent-color: #c8e6cc;
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 .instructions {
   max-width: 500px;
+  border: 1px solid purple;
 }
 
 .recipe-step {

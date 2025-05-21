@@ -3,99 +3,104 @@
   @if $size == h0 and $device == desktop {
     font-family: 'P22MackinacProExtraBold', serif;
     font-weight: 800;
-    font-size: 72px;
-    line-height: 100%;
+    font-size: 64px;
+    line-height: 110%;
   }
   @else if $size == h0 and $device == mobile {
     font-family: 'P22MackinacProExtraBold', serif;
     font-weight: 800;
-    font-size: 48px;
-    line-height: 110%;
+    font-size: 40px;
+    line-height: 115%;
   }
-  
+   
   // h1 - Título de Seção
   @else if $size == h1 and $device == desktop {
     font-family: 'Lora', serif;
     font-style: italic;
-    font-weight: 500;
-    font-size: 52px;
-    line-height: 110%;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
   }
   @else if $size == h1 and $device == mobile {
     font-family: 'Lora', serif;
     font-style: italic;
     font-weight: 500;
     font-size: 32px;
-    line-height: 120%;
+    line-height: 125%;
   }
-  
+   
   // h2 - Subtítulo Principal
   @else if $size == h2 and $device == desktop {
-    font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 120%;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
   }
   @else if $size == h2 and $device == mobile {
     font-family: 'Lora', serif;
     font-style: italic;
     font-weight: 500;
-    font-size: 32px;  
-    line-height: 130%;
+    font-size: 28px;
+    line-height: 135%;
   }
-  
+   
   // h3 - Título de Componente
   @else if $size == h3 and $device == desktop {
-    font-family: 'Sora', sans-serif;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 130%;
-  }
-  @else if $size == h3 and $device == mobile {
-    font-family: 'Sora', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 130%;
-  }
-  
-  // h4 - Subtítulo de Componente
-  @else if $size == h4 and $device == desktop {
-    font-family: 'Sora', sans-serif;
-    font-weight: 500;
+    font-family: 'Lora', sans-serif;
+    font-weight: 400;
     font-size: 24px;
     line-height: 140%;
+  }
+  @else if $size == h3 and $device == mobile {
+    font-family: 'Lora', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+  }
+   
+  // h4 - Subtítulo de Componente
+  @else if $size == h4 and $device == desktop {
+    font-family: 'Lora', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
   }
   @else if $size == h4 and $device == mobile {
     font-family: 'Sora', sans-serif;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 140%;
-  }
-  
-  // h5 - Título de Destaque
-  @else if $size == h5 and $device == desktop {
-    font-family: 'Sora', sans-serif;
-    font-weight: 400;
     font-size: 18px;
     line-height: 150%;
   }
+   
+  // h5 - Título de Destaque
+  @else if $size == h5 and $device == desktop {
+    font-family: 'Lora', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 160%;
+  }
   @else if $size == h5 and $device == mobile {
-    font-family: 'Sora', sans-serif;
+    font-family: 'Lora', sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
+    font-size: 18px;
+    line-height: 160%;
   }
 }
+
+
 
 @mixin typeface-body($size, $device) {
   font-family: 'Lora', sans-serif;
   font-weight: 500;
+ 
 
   //Medium
   @if $size == p2 and $device == desktop {
     font-size: 18px;
-    line-height: 140%;
+    line-height: 160%;
   } @else if $size == p2 and $device == mobile {
     font-size: 14px;
     line-height: 150%;
@@ -122,13 +127,11 @@
 
 p{
   @include typeface-body(p2, desktop);
+  color: #333;
+
+  /*color: #444;*/
 }
 
-/*.teste{
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 400;
-}*/
 
 .h0 {
 
@@ -154,6 +157,7 @@ h1:not(.h0) {
 }
 
 h2 {
+  color: #444;
   @include typeface-title(h2, desktop);
   
   @include responsive(mobile){
@@ -164,9 +168,17 @@ h2 {
 
 h3 {
   @include typeface-title(h3, desktop);
+  @include typeface-title(h3, mobile);
 }
 
 h4{
   @include typeface-title(h4, desktop);
 }
 
+h5{
+  
+  @include typeface-title(h5, desktop);
+  @include responsive(mobile){
+    @include typeface-title(h5, mobile);
+  }
+}

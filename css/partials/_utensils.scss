@@ -40,12 +40,6 @@
     margin-top: 12px;
     
   }   //Colocar no typography???
-
-  p {
-    line-height: 1.6;
-    margin-bottom: 8px;
-    color: #444;
-  }
 }
 
 .week-label {
@@ -66,6 +60,7 @@
 .read-more{
   color: #2e7d32;
   float: right;
+
   
 
   &:hover{

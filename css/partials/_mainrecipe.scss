@@ -1,44 +1,43 @@
 .bg-section-receitas {
- 
   background-color: peachpuff;
-}
-
-.container h2 {
-  
-  
-  color: #333;
 }
 
 .recipe-container {
   margin-top: 15px;
-  
- @include grid-responsive(2);
+  @include grid-responsive(2);
   gap: 15px;
-  border: 1px solid purple;
-
+  
   @include responsive(mobile){
     display: flex;
     flex-direction: column;
-   
     @include grid-responsive(1);
   }
 }
 
 .recipe-item {
+  border: 1px solid red;
   display: flex;
   align-items: stretch;
   background-color: #FFFAF0;
-  border: 1px solid #e0e0e0;
-  
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.recipe-item:hover {
-  background-color: #ffead1;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.3s ease;
+  
+  
+  /* Hover no card inteiro */
+  &:hover {
+    background-color: #2e7d32;
+    
+    /* Mudança de cor para todos elementos de texto */
+    h3, p {
+      color: #ffffff;
+    }
+    
+    /* Cor do círculo no hover */
+    .circle-clip {
+      background-color: #2e7d32;
+    }
+  }
 }
 
 .image-wrapper {
@@ -60,16 +59,12 @@
   right: -30px;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: #FFFAF0;
   clip-path: circle(17px at center);
   z-index: 2;
   transition: background-color 0.3s ease;
-}
-
-.recipe-item:hover .circle-clip {
-  background-color: #ffead1;
 }
 
 .recipe-content {
@@ -80,19 +75,25 @@
   justify-content: space-between;
 }
 
-.recipe-title {
-  font-family: 'Lora', serif;
-  font-size: 18px;
+/* Estilos para todos os elementos de texto */
+.recipe-content h3 {
   color: #333;
   margin-bottom: 5px;
   font-weight: 500;
   line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
 .card-description {
-  color: #666;
+  padding: 18px;
   font-size: 14px;
   margin-bottom: 5px;
+}
+
+.card-description p {
+  color: #333;
+  transition: color 0.3s ease;
+  margin: 0;
 }
 
 .recipe-tags {
@@ -102,30 +103,6 @@
 }
 
 .tag {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
-
-
-
-
-
-
-
-
-/* Ícones SVG das tags         >>>> INTERESSANTEEEE
-.tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px; // Reduzido de 6px
-    margin-top: 3px;
-    margin-bottom: 3px;
-}
-
-.tag-icon {
-    width: 24px; // Reduzido de 30px
-    height: 24px; // Reduzido de 30px
-    display: inline-block;
-    object-fit: contain;
-    flex-shrink: 0;
-}*/
