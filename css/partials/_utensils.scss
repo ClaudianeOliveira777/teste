@@ -20,6 +20,7 @@
   @include responsive(mobile) {
     @include grid-responsive(1);
     gap: 5px;
+    
 
     &.reverse {
       direction: initial;
@@ -35,7 +36,8 @@
 
   h2 {
     line-height: 1.2;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    margin-top: 12px;
     
   }   //Colocar no typography???
 
@@ -48,12 +50,17 @@
 
 .week-label {
   font-family: 'Sora', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 2px;
   padding-bottom: 12px;
   display: inline-block;
   font-weight: 500;
   color: #333;
+}
+
+.sections-description{
+  line-height: 1.6;
+  padding-left: 16px;
 }
 
 .read-more{
@@ -68,20 +75,23 @@
 
 
 .sections-image {
-  width: 100%;
+  width: 95%;
   max-height: 400px;
   display: flex;
   justify-content: center;
-
   overflow: hidden;
+  border: 1px solid red;
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
+}
 
-  img {
-   width: 95%;
+.sections-image img {
+  width: 100%; /* Make the image take up the full container width */
   border-radius: 8px;
   height: auto;
-  object-fit: contain;
+  object-fit: cover; /* Changed from contain to cover to fill the container */
   display: block;
-  }
+  margin: 0; /* Remove any margin */
 }
 
 // NOVA SEÇÃO DO VÍDEO

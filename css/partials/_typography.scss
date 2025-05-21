@@ -40,8 +40,8 @@
   @else if $size == h2 and $device == mobile {
     font-family: 'Lora', serif;
     font-style: italic;
-    font-weight: 400;
-    font-size: 28px;
+    font-weight: 500;
+    font-size: 32px;  
     line-height: 130%;
   }
   
@@ -94,7 +94,7 @@
 
   //Medium
   @if $size == p2 and $device == desktop {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 140%;
   } @else if $size == p2 and $device == mobile {
     font-size: 14px;
@@ -155,6 +155,11 @@ h1:not(.h0) {
 
 h2 {
   @include typeface-title(h2, desktop);
+  
+  @include responsive(mobile){
+    @include typeface-title(h2, mobile);
+  }
+  
 }
 
 h3 {

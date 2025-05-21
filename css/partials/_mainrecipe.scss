@@ -1,24 +1,26 @@
 .bg-section-receitas {
-  padding: 30px 0;
-  background-color: #FFFAF0;
+ 
+  background-color: peachpuff;
 }
 
 .container h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
+  
+  
   color: #333;
 }
 
 .recipe-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  margin-top: 15px;
+  
+ @include grid-responsive(2);
   gap: 15px;
-}
+  border: 1px solid purple;
 
-@media (max-width: 768px) {
-  .recipe-container {
+  @include responsive(mobile){
     display: flex;
     flex-direction: column;
+   
+    @include grid-responsive(1);
   }
 }
 
