@@ -1,12 +1,12 @@
 .dish-section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
+  gap: 32px;
+  padding: 32px;
+  max-width: 997px; //1200px. 
   margin: 0 auto;
   width: 100%;
-  background-color: #fffaf4;
+  background-color: #DDC29E;
 
   .dish-wrapper {
     display: grid;
@@ -17,42 +17,45 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    align-items: center;
+    align-items: start;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       text-align: center;
     }
 
-    .dish-text {
-      .dish-title {
-        text-align: left;
+    .dish-title {
+      text-align: left;
 
-        @media (max-width: 768px) {
-          text-align: center;
-        }
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+
+    .dish-description {
+      margin: 1rem 0;
+      
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .dish-tags {
+      display: flex;
+      gap: 12px;
+      padding-top: 12px;
+
+      .category-icon {
+        width: 40px;
+        height: 40px;
       }
 
-      .dish-description {
-        margin: 1rem 0;
-        background-color: #fff3e0;
-        padding: 1rem;
-        border-radius: 8px;
+      .teste{
+        width: 70px;
+        height: 70px;
       }
 
-      .dish-tags {
-        display: flex;
-        gap: 12px;
-        padding-top: 12px;
-
-        .category-icon {
-          width: 40px;
-          height: 40px;
-        }
-
-        @media (max-width: 768px) {
-          justify-content: center;
-        }
+      @media (max-width: 768px) {
+        justify-content: center;
       }
     }
 

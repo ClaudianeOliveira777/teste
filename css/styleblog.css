@@ -489,12 +489,12 @@ h5 {
 .dish-section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
+  gap: 32px;
+  padding: 32px;
+  max-width: 997px;
   margin: 0 auto;
   width: 100%;
-  background-color: #fffaf4;
+  background-color: #DDC29E;
 }
 .dish-section .dish-wrapper {
   display: grid;
@@ -504,7 +504,7 @@ h5 {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
-  align-items: center;
+  align-items: start;
 }
 @media (max-width: 768px) {
   .dish-section .dish-header {
@@ -512,31 +512,34 @@ h5 {
     text-align: center;
   }
 }
-.dish-section .dish-header .dish-text .dish-title {
+.dish-section .dish-header .dish-title {
   text-align: left;
 }
 @media (max-width: 768px) {
-  .dish-section .dish-header .dish-text .dish-title {
+  .dish-section .dish-header .dish-title {
     text-align: center;
   }
 }
-.dish-section .dish-header .dish-text .dish-description {
+.dish-section .dish-header .dish-description {
   margin: 1rem 0;
-  background-color: #fff3e0;
   padding: 1rem;
   border-radius: 8px;
 }
-.dish-section .dish-header .dish-text .dish-tags {
+.dish-section .dish-header .dish-tags {
   display: flex;
   gap: 12px;
   padding-top: 12px;
 }
-.dish-section .dish-header .dish-text .dish-tags .category-icon {
+.dish-section .dish-header .dish-tags .category-icon {
   width: 40px;
   height: 40px;
 }
+.dish-section .dish-header .dish-tags .teste {
+  width: 70px;
+  height: 70px;
+}
 @media (max-width: 768px) {
-  .dish-section .dish-header .dish-text .dish-tags {
+  .dish-section .dish-header .dish-tags {
     justify-content: center;
   }
 }
