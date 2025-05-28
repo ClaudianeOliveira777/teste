@@ -18,6 +18,10 @@ header {
 
 }
 
+li{
+  list-style: none;
+}
+
 nav {
     display: flex;
     justify-content: flex-start;  // Garante que o menu fique à esquerda

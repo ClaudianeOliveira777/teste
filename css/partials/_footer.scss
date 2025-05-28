@@ -1,0 +1,104 @@
+footer {
+    background-color: #f3b281d6;
+    padding: 20px;
+}
+
+.footer-content {
+    @include grid-responsive(2); 
+    gap: 50px; // Espaço entre colunas
+    align-items: start; // Alinha no topo
+    max-width: 997px;
+    margin: 0 auto;
+    
+    @include responsive(mobile) {
+        @include grid-responsive(1); // 1 coluna no mobile
+        gap: 30px;
+    }
+    
+    // Último filho (newsletter)
+    > .newsletter {
+        // Estilos para a segunda coluna
+        justify-self: end; // Alinha newsletter à direita
+        width: 100%;
+        max-width: 300px; // Limita largura do newsletter
+        
+        h4 {
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        // Container para input + botão lado a lado
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            
+            @include responsive(mobile) {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        
+        input {
+            flex: 1; // Ocupa o espaço disponível
+            padding: 12px;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid blue;
+            outline: none;
+            font-size: 14px;
+            
+            &::placeholder {
+                color: gray;
+            }
+        }
+        
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            flex-shrink: 0; // Não encolhe
+            
+            &:hover {
+                background-color: #45a049;
+            }
+            
+            @include responsive(mobile) {
+                width: 100%; // Largura total no mobile
+            }
+        }
+    }
+}
+
+// Estilos para as categorias
+.footer-content h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+        margin-bottom: 12px;
+        
+        a {
+            color: gray;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: #4caf50;
+                text-decoration: underline;
+            }
+        }
+    }
+}
