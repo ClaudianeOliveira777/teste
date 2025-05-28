@@ -22,68 +22,6 @@ body {
   }
 }
 
-/*.bg-section-week {
-  padding: 10px 0;
-  position: relative;
-}
-
-.grid-week {
-  @include grid-responsive(2);
-  align-items: center;
-  max-width: 997px;
-  margin: 0 auto;
-
-  @include responsive(mobile) {
-    @include grid-responsive(1);
-    gap: 5px;
-  }
-}
-
-.content {
-  padding: 0;
-}
-
-.content a {
-
-  font-weight: 500;
-
-  font-size: 18px;
-
-
-}
-
-.week-label {
-  font-family: 'Sora', sans-serif;
-  font-size: 18px;
-  letter-spacing: 2px;
-  padding-bottom: 12px;
-  display: inline-block;
-  font-weight: 500;
-  color: #333;
-}
-
-.content h2 {
-  line-height: 1.2;
-  margin-bottom: 20px;
-
-  font-weight: 500; //ok?
-}
-
-.read-more{
-  color: #2e7d32;
-  float: right;
-
-
-  &:hover{
-    text-decoration: underline;
-  }
-}
-
-.content p {
-  line-height: 1.6;
-  margin-bottom: 24px;
-  color: #444;
-} */
 .bg-section-receitas {
   background-color: peachpuff;
 }
@@ -111,6 +49,7 @@ body {
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   transition: background-color 0.3s ease;
+  height: 119px;
   /* Hover no card inteiro */
 }
 .recipe-item:hover {
@@ -252,17 +191,16 @@ body {
   }
 }
 
-.sections-content h2 {
+.sections-title {
   line-height: 1.2;
   margin-bottom: 12px;
-  margin-top: 12px;
+  display: flex;
 }
 
 .week-label {
   font-family: "Sora", sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
-  padding-bottom: 12px;
   display: inline-block;
   font-weight: 500;
   color: #333;
@@ -276,6 +214,7 @@ body {
 .read-more {
   color: #2e7d32;
   float: right;
+  margin-right: 20px;
 }
 .read-more:hover {
   text-decoration: underline;
@@ -596,6 +535,109 @@ h5 {
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  font-family: "Sora";
+}
+
+.share-options {
+  text-align: center;
+}
+
+.share-icons {
+  display: inline-block;
+  border: 1px solid red;
+  margin: 5px;
+}
+
+.proximas-receitas {
+  padding: 32px;
+  background-color: bisque;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .proximas-receitas {
+    width: 100%; /* ✅ Largura total no mobile */
+    padding: 12px; /* ✅ Menos padding no mobile */
+  }
+}
+
+h2 {
+  text-align: center;
+  font-style: normal;
+}
+
+.suggestion-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  border: 1px solid #81c784;
+}
+@media screen and (max-width: 768px) {
+  .suggestion-container {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+.suggestion-card {
+  position: relative;
+  width: 370px;
+  height: 220px;
+  border: 1px solid red;
+}
+@media screen and (max-width: 768px) {
+  .suggestion-card {
+    width: 280px;
+    height: 160px;
+  }
+}
+
+.suggestion-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+
+.suggestion-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.suggestion-title {
+  /*margin: 0 0 6px;*/
+  /*font-size: 17.6px;*/
+  margin-bottom: 20px;
+  color: wheat;
+  font-size: 30px !important;
+}
+@media screen and (max-width: 768px) {
+  .suggestion-title {
+    font-size: 20px !important;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+}
+
+.suggestion-icones {
+  display: flex;
+  gap: 8px;
+}
+
+.suggestion-icone {
+  width: 45px;
+  height: 45px;
 }
 
 .m-4 {
@@ -2059,7 +2101,6 @@ a {
   top: 88px; /* Altura do header */
   left: 0; /* Colado no canto esquerdo */
   width: 250px; /* Ou um valor fixo como 250px */
-  height: calc(100vh - 88px);
   background-color: #fce4ec;
   list-style: none;
   margin: 0;

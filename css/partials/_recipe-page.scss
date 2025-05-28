@@ -1,3 +1,6 @@
+
+
+
 .dish-section {
   display: grid;
   grid-template-columns: 1fr;
@@ -7,6 +10,7 @@
   margin: 0 auto;
   width: 100%;
   background-color: #DDC29E;
+
 
   .dish-wrapper {
     display: grid;
@@ -111,4 +115,125 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  font-family: 'Sora';
 }
+
+
+.share-options{
+  text-align: center;
+}
+
+.share-icons{
+  display: inline-block;
+  border: 1px solid red;
+  margin: 5px;
+}
+
+
+
+
+
+.proximas-receitas {
+      padding: 32px;
+      background-color: bisque;
+      
+      margin: 0 auto;
+     
+
+         @include responsive(mobile){
+        width: 100%;           /* ✅ Largura total no mobile */
+        padding: 12px;         /* ✅ Menos padding no mobile */
+    }
+    
+    }
+
+   h2{
+    text-align: center;
+    font-style: normal;
+
+  
+    
+   }
+
+    .suggestion-container {
+      display: flex;
+      gap: 20px;
+  
+      justify-content: center; 
+      border: 1px solid #81c784;
+
+      @include responsive(mobile){
+       
+        flex-direction: column;
+         gap: 12px;
+         align-items: center;
+      }
+       
+      
+    }
+
+  .suggestion-card {
+  position: relative;
+  width: 370px;
+  height: 220px; 
+  border: 1px solid red;
+
+   @include responsive(mobile) {
+        width: 280px; // ✅ Cards menores no mobile
+        height: 160px; // ✅ Altura reduzida
+    }
+
+ 
+}
+
+    .suggestion-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+.suggestion-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%); //simplificar?
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+
+}
+
+    
+
+    .suggestion-title{
+      /*margin: 0 0 6px;*/
+      /*font-size: 17.6px;*/
+      margin-bottom: 20px;
+      color: wheat;
+      font-size: 30px !important;
+
+       @include responsive(mobile) {
+        font-size: 20px !important; // ✅ Título bem menor no mobile
+        margin-bottom: 12px; // ✅ Margem reduzida
+        line-height: 1.2; // ✅ Altura da linha ajustada
+    }
+    }
+
+  
+    .suggestion-icones {
+      display: flex;
+      gap: 8px;
+    }
+
+    .suggestion-icone {
+      width: 45px;
+      height: 45px;
+      
+    }

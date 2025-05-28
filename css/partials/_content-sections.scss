@@ -32,21 +32,18 @@
   }
 }
 
-.sections-content {
-
-  h2 {
+.sections-title {
     line-height: 1.2;
     margin-bottom: 12px;
-    margin-top: 12px;
     
-  }   //Colocar no typography???
+   
+    display: flex;
 }
 
 .week-label {
   font-family: 'Sora', sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
-  padding-bottom: 12px;
   display: inline-block;
   font-weight: 500;
   color: #333;
@@ -60,7 +57,7 @@
 .read-more{
   color: #2e7d32;
   float: right;
-
+  margin-right: 20px; 
   
 
   &:hover{
