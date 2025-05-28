@@ -15,7 +15,7 @@
 }
 
 .recipe-item {
-  border: 1px solid red;
+ 
   display: flex;
   align-items: stretch;
   background-color: #FFFAF0;
@@ -111,7 +111,7 @@
   width: 100%;
   padding: 0;
   margin: 0;
-  border: 1px solid red;
+  border: 1px solid rgb(0, 255, 157);
 }
 
 .tag {
@@ -122,7 +122,8 @@
 @include responsive(mobile) {
   .recipe-item {
     transform: scale(0.9);
-    min-height: 122px;
+    min-height: 139px;
+    border:1px solid #2e7d32;
   }
 
   .image-wrapper {
