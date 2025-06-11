@@ -96,7 +96,7 @@ searchInput.addEventListener('blur', () => {
 
 
 
-//Hamburguer
+//Hamburguer somente no mobile
 
 const hamburguerToggle = document.getElementById("hamburguer-toggle");
 const menu = document.getElementById("menu");

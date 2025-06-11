@@ -2,7 +2,7 @@
 
 
 header {
-     background-color: $pink-light;
+     
     height: 88px;
     position: relative;
     display: flex;
@@ -48,15 +48,16 @@ nav {
 
 
  li a:hover{
- color: white;
+ text-decoration: underline;
 }
 
 
-a {
-    color: $gray-light;
+ header, footer, a {
+    color: #58855D;
     cursor: pointer;
     text-decoration: none;
-    @include typeface-body(m, desktop);
+    @include typeface-body(p4, desktop);
+    
 }
 
 
@@ -70,8 +71,8 @@ a {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: $pink-light;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+   
     list-style: none;  
 }
 
@@ -81,7 +82,7 @@ a {
 }
 
 .sub-list li a:hover {
-    color: white;
+    color: none;
 }
 
 
@@ -193,7 +194,8 @@ a {
     width:250px; /* Ou um valor fixo como 250px */
    
    
-    background-color: $pink-light;
+    background-color: #FFF5F2;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.08);
     list-style: none;
   
    

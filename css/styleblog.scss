@@ -5,15 +5,20 @@
 }
 
 body{
-    background-color: papayawhip; /* #151B26*/
+    background-color: #FFF5F2;  /* #151B26... #F3D7B5...#FFE4B3;*/
 }
+/*#fcdfcf , #FDF7EF, #fcf7f2 */
 
 @import 'partials/colors';
-@import 'partials/layout';
-@import 'partials/mainrecipe';
-@import 'partials/content-sections';
-@import 'partials/hero-foodCategory';
+@import 'partials/mixin-layout';
 @import 'partials/typography';
+
+@import 'partials/content-sections';
+
+@import 'partials/mainrecipe';
+
+@import 'partials/hero-foodCategory';
+
 @import 'partials/recipe-page';
 @import 'partials/spacing';
 
