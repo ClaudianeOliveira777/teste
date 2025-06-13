@@ -6,9 +6,11 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 47vh;
+   background-attachment: scroll; // importante para mobile
 
   @include responsive(mobile){
     height: 40vh;
+      background-image: url('../../assets/plates.jpg');
   }
   }
 
