@@ -9,7 +9,8 @@ body {
   background-color: #FFF5F2; /* #151B26... #F3D7B5...#FFE4B3;*/
 }
 
-/*#fcdfcf , #FDF7EF, #fcf7f2 */
+/*#fcdfcf , #FDF7EF, #fcf7f2,
+ #FFF5F2  <atual */
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -38,18 +39,21 @@ p {
 }
 
 .h0 {
-  color: #6F7561;
-  font-family: "P22MackinacProExtraBold", serif;
-  font-weight: 800;
-  font-size: 64px;
+  display: flex;
+  justify-content: flex-start;
+  color: #FFC107; /*#6F7561, #D4785A ,#FFC107 , #734060*/
+  text-shadow: 1px 1px 2px rgba(119, 117, 117, 0.7), 0 0 10px rgba(253, 205, 119, 0.7);
+  font-family: "Della Respira", serif;
+  font-weight: 400;
+  font-size: 97px;
   line-height: 110%;
 }
 @media screen and (max-width: 768px) {
   .h0 {
-    font-family: "P22MackinacProExtraBold", serif;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 115%;
+    font-family: "Della Respira", serif;
+    /*font-family: 'P22MackinacProExtraBold', serif;*/
+    font-weight: 400;
+    font-size: 70px;
   }
 }
 
@@ -71,11 +75,11 @@ h1:not(.h0) {
 }
 
 h2 {
-  color: #444;
+  color: #333;
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 130%;
 }
 @media screen and (max-width: 768px) {
@@ -231,7 +235,7 @@ h5 {
   }
 }
 .bg-section-receitas {
-  background-color: #F0E6D6;
+  background-color: #9cb5b3; /*#48736f*/
 }
 
 .recipe-container {
@@ -366,26 +370,45 @@ h5 {
     padding: 8px;
   }
 }
+.backgroundTeste {
+  background: url("../../assets/plates.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 47vh;
+}
+@media screen and (max-width: 768px) {
+  .backgroundTeste {
+    height: 40vh;
+  }
+}
+
 .hero {
   text-align: center;
   padding: 48px 16px;
+  height: 70vh;
+  /*.woodspoon{
+      width: 35%;
+
+      @include responsive(mobile){
+         width: 50%; 
+      }
+
+  } */
 }
 @media screen and (max-width: 768px) {
   .hero {
     padding: 48px;
   }
 }
-.hero .woodspoon {
-  width: 35%;
-}
-@media screen and (max-width: 768px) {
-  .hero .woodspoon {
-    width: 50%;
-  }
-}
 
 .bg-section-02 {
-  background-color: #F0E6D6;
+  background-color: #DDC29E; /*#F0E6D6  gostei...... #734060 ... // #48736f */
+  margin-top: 2px;
+  /* background: url('../../assets/plastes02.jpg');
+     background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
   text-align: center;
 }
 .bg-section-02 p {
@@ -2103,8 +2126,10 @@ header, footer, a {
   top: 88px; /* Altura do header */
   left: 0; /* Colado no canto esquerdo */
   width: 250px; /* Ou um valor fixo como 250px */
-  background-color: #FFF5F2;
-  box-shadow: 0 0 9px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 9px rgba(176, 155, 144, 0.9);
+  background-color: #fcdfcf;
+  /*background-color: #FFF5F2;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.08);*/
   list-style: none;
   margin: 0;
   display: none;
@@ -2203,8 +2228,12 @@ header, footer, a {
 }
 
 footer {
-  background-color: #F0E6D6;
+  /*background-color: #57696d;*/
   padding: 20px;
+  background: url("../../assets/footerplates.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .footer-content {

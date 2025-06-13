@@ -1,16 +1,17 @@
 @mixin typeface-title($size, $device) {
   // h0 - Título Principal / Hero
   @if $size == h0 and $device == desktop {
-    font-family: 'P22MackinacProExtraBold', serif;
-    font-weight: 800;
-    font-size: 64px;
+    font-family: 'Della Respira', serif;
+    font-weight: 400;
+    font-size: 97px;
     line-height: 110%;
   }
   @else if $size == h0 and $device == mobile {
-    font-family: 'P22MackinacProExtraBold', serif;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 115%;
+    font-family:  'Della Respira', serif;
+    /*font-family: 'P22MackinacProExtraBold', serif;*/
+    font-weight: 400;
+    font-size: 70px;
+    
   }
    
   // h1 - Título de Seção
@@ -34,7 +35,7 @@
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 130%;
   }
   @else if $size == h2 and $device == mobile {
@@ -146,10 +147,21 @@ p{
 
 .h0 {
 
+    display: flex;
+  justify-content: flex-start;
+
+  color: #FFC107;  /*#6F7561, #D4785A ,#FFC107 , #734060*/
   
  
- 
-  color: #6F7561;
+   
+    
+    
+ text-shadow: 
+        1px 1px 2px rgba(119, 117, 117, 0.7),
+        0 0 10px rgba(253,205,119, 0.7); 
+
+
+
   @include typeface-title(h0, desktop);
 
   @include responsive(mobile) {
@@ -168,7 +180,7 @@ h1:not(.h0) {
 }
 
 h2 {
-  color: #444;
+  color: #333;
   @include typeface-title(h2, desktop);
   
   @include responsive(mobile){

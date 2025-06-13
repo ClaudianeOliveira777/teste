@@ -1,27 +1,47 @@
+
+  .backgroundTeste{
+    
+    background: url('../../assets/plates.jpg');
+     background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 47vh;
+
+  @include responsive(mobile){
+    height: 40vh;
+  }
+  }
+
 .hero{
     
     text-align: center;  //está errado usar text-aligin ou é melhor usar display:flex?
     padding: 48px 16px;
+    height: 70vh;
 
     @include responsive(mobile){
         padding:48px;
     }
 
-    .woodspoon{
+    /*.woodspoon{
         width: 35%;
     
         @include responsive(mobile){
            width: 50%; 
         }
         
-    }
+    } */
 }
 
 
 
 .bg-section-02{
-  background-color: #F0E6D6;
-    text-align: center;
+  background-color: #DDC29E; /*#F0E6D6  gostei...... #734060 ... // #48736f */
+   margin-top: 2px;
+  /* background: url('../../assets/plastes02.jpg');
+     background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  text-align: center;
  
   
     

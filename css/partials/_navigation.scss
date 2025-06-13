@@ -2,7 +2,7 @@
 
 
 header {
-     
+    
     height: 88px;
     position: relative;
     display: flex;
@@ -30,6 +30,8 @@ nav {
    
     
 }
+
+
 
 .menu-desktop {
     display: flex;
@@ -194,8 +196,11 @@ nav {
     width:250px; /* Ou um valor fixo como 250px */
    
    
-    background-color: #FFF5F2;
-    box-shadow: 0 0 9px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 9px rgba(176, 155, 144, 0.9);
+    background-color: #fcdfcf;
+
+    /*background-color: #FFF5F2;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.08);*/
     list-style: none;
   
    
