@@ -171,6 +171,7 @@ p{
 }
 
 h1:not(.h0) {
+  color: #3A3A3A;
   @include typeface-title(h1, desktop);
 
   @include responsive(mobile){

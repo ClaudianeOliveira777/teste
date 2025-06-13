@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #FFF5F2; /* #151B26... #F3D7B5...#FFE4B3;*/
+  background-color: #FDF8F2; /* #151B26... #F3D7B5...#FFE4B3;*/
 }
 
 /*#fcdfcf , #FDF7EF, #fcf7f2,
@@ -58,6 +58,7 @@ p {
 }
 
 h1:not(.h0) {
+  color: #3A3A3A;
   font-family: "Lora", serif;
   font-style: italic;
   font-weight: 400;
@@ -235,7 +236,7 @@ h5 {
   }
 }
 .bg-section-receitas {
-  background-color: #9cb5b3; /*#48736f*/
+  background-color: #EAD9C4; /*#48736f*/
 }
 
 .recipe-container {
@@ -404,7 +405,7 @@ h5 {
 }
 
 .bg-section-02 {
-  background-color: #DDC29E; /*#F0E6D6  gostei...... #734060 ... // #48736f */
+  background-color: #EAD9C4; /*#F0E6D6  gostei...... #734060 ... // #48736f     #EAD9C4 */
   margin-top: 2px;
   /* background: url('../../assets/plastes02.jpg');
      background-size: cover;
@@ -575,7 +576,6 @@ h5 {
 
 .proximas-receitas {
   padding: 32px;
-  background-color: bisque;
   margin: 0 auto;
 }
 .proximas-receitas h2 {
