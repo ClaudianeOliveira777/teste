@@ -1,16 +1,26 @@
 
   .backgroundTeste{
     
-    background-image: url('../../assets/plates.jpg');
+    background: url('../../assets/plates.jpg');
      background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 47vh;
-   background-attachment: scroll; // importante para mobile
-
+   
+  min-height: 300px;
+  // Específico para iOS
+  -webkit-background-size: cover;
+  -webkit-transform: translateZ(0); // força aceleração de hardware
+    transform: translateZ(0); // propriedade padrão
   @include responsive(mobile){
     height: 40vh;
-      background-image: url('../../assets/plates.jpg');
+     min-height: 250px;
+     
+      // Para iPhone especificamente  
+    @supports (-webkit-touch-callout: none) {
+      background-attachment: scroll !important;
+      -webkit-background-size: cover !important;
+    }
   
   }
   }

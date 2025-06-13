@@ -371,17 +371,25 @@ h5 {
   }
 }
 .backgroundTeste {
-  background-image: url("../../assets/plates.jpg");
+  background: url("../../assets/plates.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 47vh;
-  background-attachment: scroll;
+  min-height: 300px;
+  -webkit-background-size: cover;
+  transform: translateZ(0);
 }
 @media screen and (max-width: 768px) {
   .backgroundTeste {
     height: 40vh;
-    background-image: url("../../assets/plates.jpg");
+    min-height: 250px;
+  }
+  @supports (-webkit-touch-callout: none) {
+    .backgroundTeste {
+      background-attachment: scroll !important;
+      -webkit-background-size: cover !important;
+    }
   }
 }
 
