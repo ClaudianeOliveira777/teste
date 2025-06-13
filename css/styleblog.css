@@ -376,20 +376,11 @@ h5 {
   background-position: center;
   background-repeat: no-repeat;
   height: 47vh;
-  min-height: 300px;
-  -webkit-background-size: cover;
-  transform: translateZ(0);
 }
 @media screen and (max-width: 768px) {
   .backgroundTeste {
     height: 40vh;
     min-height: 250px;
-  }
-  @supports (-webkit-touch-callout: none) {
-    .backgroundTeste {
-      background-attachment: scroll !important;
-      -webkit-background-size: cover !important;
-    }
   }
 }
 
@@ -2240,7 +2231,7 @@ header, footer, a {
 footer {
   /*background-color: #57696d;*/
   padding: 20px;
-  background: url("../../assets/footerplates.jpg");
+  background: url("https://i.postimg.cc/3x8pHrcz/plates.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
