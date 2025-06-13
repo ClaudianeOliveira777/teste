@@ -1,7 +1,7 @@
 
   .backgroundTeste{
     
-    background: url('../../assets/plates.jpg');
+    background-image: url('../../assets/plates.jpg');
      background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,6 +11,7 @@
   @include responsive(mobile){
     height: 40vh;
       background-image: url('../../assets/plates.jpg');
+  
   }
   }
 
