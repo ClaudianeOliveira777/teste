@@ -19,7 +19,7 @@
     font-family: 'Lora', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 120%;
   }
   @else if $size == h1 and $device == mobile {
@@ -35,7 +35,7 @@
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 32px;
     line-height: 130%;
   }
   @else if $size == h2 and $device == mobile {

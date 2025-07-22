@@ -1,0 +1,92 @@
+.newsletter {
+  
+  padding: 60px 30px;
+  border-radius: 20px;
+  text-align: center;
+
+  margin-bottom: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+  .teste-title {
+    font-size: 35px;
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: #555;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+  
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    input[type="email"] {
+        padding: 14px 20px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none; /* Remove todas as bordas primeiro */
+    border-bottom: 2px solid #2e7d32; /* Só a borda inferior verde */
+    outline: none;
+    border-radius: 1px;
+    width: 550px;
+    max-width: 100%;
+    transition: border-color 0.3s ease;
+
+      &:focus {
+        border-bottom-color: #2e7d32; /* Mantém só a borda inferior no focus */
+      }
+    }
+
+    button {
+      background-color: transparent;
+    color: #333333;
+    padding: 14px 24px;
+    border: 2px solid #2e7d32;
+    border-radius: 4px; /* Bordas menos arredondadas */
+    font-size: 1rem;
+    font-weight: normal;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+
+      &:hover {
+        background-color: #f8f8f8;
+    border-color: #999999;
+      }
+    }
+  }
+
+  @include responsive(mobile) {
+    padding: 40px 20px;
+
+    .teste-title {
+      font-size: 25px;
+      font-style: italic;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    form {
+      flex-direction: column;
+      gap: 12px;
+
+      input,
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

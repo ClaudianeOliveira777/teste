@@ -1,7 +1,8 @@
 
   .backgroundTeste{
     
-    background: url('https://i.postimg.cc/3x8pHrcz/plates.jpg');
+    /*background: url('https://i.postimg.cc/3x8pHrcz/plates.jpg');*/
+    background: url('/assets/Frame\ 5.png');
      background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,8 +40,8 @@
 
 
 .bg-section-02{
-  background-color:  #EAD9C4; /*#F0E6D6  gostei...... #734060 ... // #48736f     #EAD9C4 */
-   margin-top: 2px;
+  background-color:  #D7CAB5; /*#F0E6D6  gostei...... #734060 ... // #48736f     #EAD9C4 */
+   margin-top: 20px;
   /* background: url('../../assets/plastes02.jpg');
      background-size: cover;
   background-position: center;
@@ -88,6 +89,11 @@
  
   margin: 8px;
 
+  :hover{
+     transform: scale(0.95);
+     transition: all 0.3s ease;
+    }
+
 
   .category-img {
     width: 70px;      
@@ -108,6 +114,8 @@
 
   a{
     text-decoration: none;
+
+    
   }
 }
 

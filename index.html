@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+
     <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -157,7 +159,7 @@
       <div class="sections-content">
         
         <span class="week-label">Queridinho da Semana</span> 
-         <a><h2 class="sections-title">Brigadeiro Vegano</h2></a> aq nao queria t.
+         <a><h2 class="sections-title">Brigadeiro Vegano</h2></a>
         <p>Um bolo de cenoura feito em apenas uma tigela, fofinho, úmido e com aquele sabor caseiro irresistível!
 Perfeito com ou sem cobertura de chocolate e super fácil de preparar  leva só 10 ingredientes!</p> 
 
@@ -170,6 +172,16 @@ Perfeito com ou sem cobertura de chocolate e super fácil de preparar  leva só 
   </div>
     </section>
 
+<!----------Newsletter------------->
+    <section class="newsletter">
+  <h3 class="teste-title">Receitas Gentis na sua Caixa de Entrada</h3>
+  <p>Receba receitas veganas, sem açúcar, sem lactose e sem glúten toda semana.</p>
+  <form>
+    <input type="email" placeholder="Digite seu e-mail" required />
+    <button>Quero Receber</button>
+  </form>
+</section>
+
 
 
 <!----------Receitas em destaque------------->
@@ -180,16 +192,17 @@ Perfeito com ou sem cobertura de chocolate e super fácil de preparar  leva só 
     <div class="recipe-container">
         <div class="recipe-item">
             <div class="image-wrapper">
-                <img src="assets/carrotcake.jpg" alt="Pão de Queijo Tradicional">
+                <img src="assets/pudim.jpg" alt="Pão de Queijo Tradicional">
                 <div class="circle-clip"></div>
             </div>
             
             <div class="recipe-content">
                 <div class="content-wrapper">
-                    <h3>Pão de Queijo Tradicional</h3>
-                    <p class="recipe-description">Delicioso pão de queijo mineiro...</p>
+                    <h3>Pudim de Leite Condensado Sem Açúcar</h3>
+                    
                     <div class="recipe-tags">
-                        <img src="assets/lactose-free.svg" class="tag" alt="Sem Lactose">
+                        <img src="assets/lactoseiconteste.svg" class="tag" alt="Sem Lactose">
+                        <img src="assets/veganiconteste.svg" class="tag" alt="Sem Lactose">
                     </div>
                 </div>
             </div>
@@ -204,9 +217,9 @@ Perfeito com ou sem cobertura de chocolate e super fácil de preparar  leva só 
             <div class="recipe-content">
                 <div class="content-wrapper">
                     <h3>Pão de Queijo Tradicional</h3>
-                    <p class="recipe-description">Delicioso pão de queijo mineiro...</p>
+                    <p class="recipe-description"></p>
                     <div class="recipe-tags">
-                        <img src="assets/lactose-free.svg" class="tag" alt="Sem Lactose">
+                        <img src="assets/gluteniconteste.svg" class="tag" alt="Sem Lactose">
                     </div>
                 </div>
             </div>
@@ -221,9 +234,9 @@ Perfeito com ou sem cobertura de chocolate e super fácil de preparar  leva só 
             <div class="recipe-content">
                 <div class="content-wrapper">
                     <h3>Coxinha de Frangooo</h3>
-                    <p class="recipe-description">Delicioso pão de queijo mineiro...</p>
+                    
                     <div class="recipe-tags">
-                        <img src="assets/lactose-free.svg" class="tag" alt="Sem Lactose">
+                        <img src="assets/sugariconteste.svg" class="tag" alt="Sem Lactose">
                     </div>
                 </div>
             </div> 
@@ -231,20 +244,90 @@ Perfeito com ou sem cobertura de chocolate e super fácil de preparar  leva só 
         
         <div class="recipe-item">
             <div class="image-wrapper">
-                <img src="assets/pancake.avif" alt="Pão de Queijo Tradicional">
+                <img src="assets/pancake banana.jpg" alt="Pão de Queijo Tradicional">
                 <div class="circle-clip"></div>
             </div>
             
             <div class="recipe-content">
                 <div class="content-wrapper">
                     <h3>Pão de Queijo Tradicional</h3>
-                    <p class="recipe-description">Delicioso pão de queijo mineiro...</p>
                     <div class="recipe-tags">
-                        <img src="assets/lactose-free.svg" class="tag" alt="Sem Lactose">
+                        <img src="assets/veganiconteste.svg" class="tag" alt="Sem Lactose">
                     </div>
                 </div>
             </div> 
         </div>
+
+
+        <div class="recipe-item">
+            <div class="image-wrapper">
+                <img src="assets/pancake banana.jpg" alt="Pão de Queijo Tradicional">
+                <div class="circle-clip"></div>
+            </div>
+            
+            <div class="recipe-content">
+                <div class="content-wrapper">
+                    <h3>Pão de Queijo Tradicional</h3>
+                   
+                    <div class="recipe-tags">
+                        <img src="assets/veganiconteste.svg" class="tag" alt="Sem Lactose">
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+
+        <div class="recipe-item">
+            <div class="image-wrapper">
+                <img src="assets/pancake banana.jpg" alt="Pão de Queijo Tradicional">
+                <div class="circle-clip"></div>
+            </div>
+            
+            <div class="recipe-content">
+                <div class="content-wrapper">
+                    <h3>Pão de Queijo Tradicional</h3>
+                    
+                    <div class="recipe-tags">
+                        <img src="assets/veganiconteste.svg" class="tag" alt="Sem Lactose">
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="recipe-item">
+            <div class="image-wrapper">
+                <img src="assets/paodequeijo.avif" alt="Pão de Queijo Tradicional">
+                <div class="circle-clip"></div>
+            </div>
+            
+            <div class="recipe-content">
+                <div class="content-wrapper">
+                    <h3>Pão de Queijo Tradicional</h3>
+                    
+                    <div class="recipe-tags">
+                        <img src="assets/veganiconteste.svg" class="tag" alt="Sem Lactose">
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="recipe-item">
+            <div class="image-wrapper">
+                <img src="assets/pancake banana.jpg" alt="Pão de Queijo Tradicional">
+                <div class="circle-clip"></div>
+            </div>
+            
+            <div class="recipe-content">
+                <div class="content-wrapper">
+                    <h3>Pão de Queijo Tradicional</h3>
+                    
+                    <div class="recipe-tags">
+                        <img src="assets/veganiconteste.svg" class="tag" alt="Sem Lactose">
+                    </div>
+                </div>
+            </div> 
+        </div>
+
     </div>
   </div>
 </section>
@@ -252,29 +335,63 @@ Perfeito com ou sem cobertura de chocolate e super fácil de preparar  leva só 
 <!------------Dicas-------------->
 
 
-<section class="sections-block">
-  <div class="container">
+<section class="sections-block">   
+  <div class="container">            
+    <h1 class="mb-12">Cozinha Inteligente</h1>          
     
-      <h1 class="mb-12">Cozinha Inteligente</h1>
+    <div class="sections-grid reverse">       
+      <div class="sections-content">                  
+        <a><h2 class="sections-title pl-12">More Than A Mixer</h2></a>         
+        <div>         
+          <p class="sections-description">          
+            Muito mais do que uma batedeira, o modelo da KitchenAid é o verdadeiro coração da cozinha! Com design icônico e potência incomparável, ela amassa, mistura, emulsiona e surpreende em cada preparo. Versátil, elegante e durável, é o sonho de consumo de quem ama praticidade e performance no dia a dia.         
+          </p>         
+        </div>         
+        <a href="#" class="read-more">Leia mais</a>       
+      </div>        
+      
+      <div class="sections-image">         
+        <img src="assets/utensils.jpg" alt="Bola de Cenoura Vegano e Sem Glúten">       
+      </div>     
+    </div>   
     
-    <div class="sections-grid reverse">
-      <div class="sections-content">
-        
-        <a><h2 class="sections-title pl-12">More Than A Mixer</h2></a>
-        <div>
-        <p class="sections-description">
-         Muito mais do que uma batedeira, o modelo da KitchenAid é o verdadeiro coração da cozinha! Com design icônico e potência incomparável, ela amassa, mistura, emulsiona e surpreende em cada preparo. Versátil, elegante e durável, é o sonho de consumo de quem ama praticidade e performance no dia a dia.
-        </p>
+    <!-- Cards de Dicas -->
+    <div class="tips-cards-grid">
+      <div class="tip-card">
+        <div class="tip-card-image">
+          <img src="assets/pinkutensils.jpg" alt="Utensílios Essenciais">
         </div>
-        <a href="#" class="read-more">Leia mais</a>
+        <h3 class="tip-card-title">Utensílios Essenciais</h3>
       </div>
-
-      <div class="sections-image">
-        <img src="assets/cool.jpg" alt="Bolo de Cenoura Vegano e Sem Glúten">
+      
+      <div class="tip-card">
+        <div class="tip-card-image">
+          <img src="assets/organizer.jpg" alt="Truques & Hacks">
+        </div>
+        <h3 class="tip-card-title">Organização da Despensa</h3>
+      </div>
+      
+      <div class="tip-card">
+        <div class="tip-card-image">
+          <img src="assets/spicesspon2.jpg" alt="Organização da Despensa">
+        </div>
+        <h3 class="tip-card-title">Substituições de Ingredientes</h3>
+      </div>
+      
+      <div class="tip-card">
+        <div class="tip-card-image">
+          <img src="assets/economia.jpg" alt="Economia na Cozinha">
+        </div>
+        <h3 class="tip-card-title">Truques & Dicas</h3>
       </div>
     </div>
-  </div>
+  
+  
+  </div> 
 </section>
+
+
+
 
 <section class="video-section">
   <div class="video-container">
@@ -310,6 +427,16 @@ Perfeito com ou sem cobertura de chocolate e super fácil de preparar  leva só 
         <img src="assets/nhoque.avif" alt="Nhoque vegano" />
       </div>
     </div>
+    
+    <!-- COOK MODE -->
+<div class="cook-mode-container">
+            <div class="cook-mode-toggle" id="cookModeToggle">
+                <div class="cook-mode-switch" id="cookModeSwitch">
+                    <div class="cook-mode-slider"></div>
+                </div>
+                <span class="cook-mode-status" id="cookModeStatus">Cook Mode (Manter tela ligada)</span>
+            </div>
+        </div>
 
     <div class="dish-content">
       <aside class="ingredients">
@@ -341,8 +468,9 @@ Perfeito com ou sem cobertura de chocolate e super fácil de preparar  leva só 
 <section class="share-options">
   <div>
     <p>Compartilhar receita:</p>
-    <div class="share-icons">WhatsApp</div>
-    <div class="share-icons">Facebook</div>
+   <img  class="share-icons" src="assets/icon-whatsapp.svg" alt="">
+   <img  class="share-icons" src="assets/icon-facebook.svg" alt="">
+   <img  class="share-icons" src="assets/icon-instagram.svg" alt="">
     <div class="share-icons">Copiar link</div>
   </div>
 </section>
@@ -424,6 +552,10 @@ Perfeito com ou sem cobertura de chocolate e super fácil de preparar  leva só 
 
 
   <script src="app.js"></script>
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>

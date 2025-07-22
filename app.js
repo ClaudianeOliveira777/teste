@@ -105,3 +105,92 @@ hamburguerToggle.addEventListener("click", () => {
   hamburguerToggle.classList.toggle("active");
   menu.classList.toggle("active");
 });
+
+
+/*Cook Mode
+let wakeLock = null;
+let isCookModeActive = false;
+
+const cookModeToggle = document.getElementById('cookModeToggle');
+const cookModeSwitch = document.getElementById('cookModeSwitch');
+const cookModeStatus = document.getElementById('cookModeStatus');
+
+cookModeToggle.addEventListener('click', async () => {
+    if (!isCookModeActive) {
+        await enableCookMode();
+    } else {
+        await disableCookMode();
+    }
+});
+
+async function enableCookMode() {
+    try {
+        if ('wakeLock' in navigator) {
+            wakeLock = await navigator.wakeLock.request('screen');
+            isCookModeActive = true;
+            updateUI();
+            
+            wakeLock.addEventListener('release', () => {
+                isCookModeActive = false;
+                updateUI();
+            });
+            
+            console.log('Cook Mode ativado - tela não vai apagar');
+        } else {
+            // Fallback para navegadores sem suporte
+            console.log('Wake Lock API não suportada, usando fallback');
+            isCookModeActive = true;
+            updateUI();
+            startFallbackMode();
+        }
+    } catch (err) {
+        console.error('Erro ao ativar Cook Mode:', err);
+        alert('Não foi possível ativar o Cook Mode neste navegador');
+    }
+}
+
+async function disableCookMode() {
+    if (wakeLock) {
+        await wakeLock.release();
+        wakeLock = null;
+    }
+    isCookModeActive = false;
+    updateUI();
+    console.log('Cook Mode desativado');
+}
+
+function updateUI() {
+    if (isCookModeActive) {
+        cookModeSwitch.classList.add('active');
+        cookModeStatus.textContent = 'Cook Mode ativo (Tela protegida)';
+    } else {
+        cookModeSwitch.classList.remove('active');
+        cookModeStatus.textContent = 'Cook Mode (Manter tela ligada)';
+    }
+}
+*/
+
+  let wakeLock = null;
+        let isActive = false;
+
+        document.getElementById('cookModeToggle').addEventListener('click', async () => {
+            if (!isActive) {
+                try {
+                    wakeLock = await navigator.wakeLock.request('screen');
+                    isActive = true;
+                    document.getElementById('cookModeSwitch').classList.add('active');
+                    document.getElementById('cookModeStatus').textContent = 'Cook Mode ativo';
+                } catch (err) {
+                    console.error('Erro:', err);
+                    // Mesmo sem wake lock, ativa visualmente
+                    isActive = true;
+                    document.getElementById('cookModeSwitch').classList.add('active');
+                    document.getElementById('cookModeStatus').textContent = 'Cook Mode ativo';
+                }
+            } else {
+                if (wakeLock) wakeLock.release();
+                isActive = false;
+                document.getElementById('cookModeSwitch').classList.remove('active');
+                document.getElementById('cookModeStatus').textContent = 'Cook Mode (Manter tela ligada)';
+            }
+        });
